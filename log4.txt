@@ -1,0 +1,83 @@
+------- Current Program State ------
+executionStack =  |(bool b; (int c; (b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2))))| 
+
+, symbolTable = {}
+, output = []
+, fileTable = {}
+, originalProgram = (bool b; (int c; (b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2))))
+
+
+------- Current Program State ------
+executionStack =  |(int c; (b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2)))| 
+ |bool b| 
+
+, symbolTable = {}
+, output = []
+, fileTable = {}
+, originalProgram = (bool b; (int c; (b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2))))
+
+
+------- Current Program State ------
+executionStack =  |(int c; (b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2)))| 
+
+, symbolTable = {b = false}
+, output = []
+, fileTable = {}
+, originalProgram = (bool b; (int c; (b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2))))
+
+
+------- Current Program State ------
+executionStack =  |(b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2))| 
+ |int c| 
+
+, symbolTable = {b = false}
+, output = []
+, fileTable = {}
+, originalProgram = (bool b; (int c; (b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2))))
+
+
+------- Current Program State ------
+executionStack =  |(b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2))| 
+
+, symbolTable = {b = false, c = 0}
+, output = []
+, fileTable = {}
+, originalProgram = (bool b; (int c; (b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2))))
+
+
+------- Current Program State ------
+executionStack =  |if (b && true) then (c = 0 + 4) else (c = 0 + 2)| 
+ |b = true| 
+
+, symbolTable = {b = false, c = 0}
+, output = []
+, fileTable = {}
+, originalProgram = (bool b; (int c; (b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2))))
+
+
+------- Current Program State ------
+executionStack =  |if (b && true) then (c = 0 + 4) else (c = 0 + 2)| 
+
+, symbolTable = {b = true, c = 0}
+, output = []
+, fileTable = {}
+, originalProgram = (bool b; (int c; (b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2))))
+
+
+------- Current Program State ------
+executionStack =  |c = 0 + 4| 
+
+, symbolTable = {b = true, c = 0}
+, output = []
+, fileTable = {}
+, originalProgram = (bool b; (int c; (b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2))))
+
+
+------- Current Program State ------
+executionStack = 
+, symbolTable = {b = true, c = 4}
+, output = []
+, fileTable = {}
+, originalProgram = (bool b; (int c; (b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2))))
+
+
