@@ -12,14 +12,14 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class PrgState {
-    private MyIStack<IStmt> exeStack;
-    private MyIDictionary<String, Value> symTable;
-    private MyIList<Value> out;
+    private MyIExeStack<IStmt> exeStack;
+    private MyISymTable<String, Value> symTable;
+    private MyIOut<Value> out;
     private IStmt originalProgram;
-    private MyIDictionary<StringValue, BufferedReader> fileTable;
+    private MyIFilename<StringValue, BufferedReader> fileTable;
 
-    public PrgState(MyIStack<IStmt> exeStack, MyIDictionary<String, Value> symTable, MyIList<Value> out,
-                    IStmt originalProgram, MyIDictionary<StringValue, BufferedReader> fileTable) {
+    public PrgState(MyIExeStack<IStmt> exeStack, MyISymTable<String, Value> symTable, MyIOut<Value> out,
+                    IStmt originalProgram, MyIFilename<StringValue, BufferedReader> fileTable) {
         this.exeStack = exeStack;
         this.symTable = symTable;
         this.out = out;
@@ -28,15 +28,15 @@ public class PrgState {
         this.fileTable = fileTable;
     }
 
-    public MyIStack<IStmt> getExeStack() {
+    public MyIExeStack<IStmt> getExeStack() {
         return exeStack;
     }
 
-    public MyIDictionary<String, Value> getSymTable() {
+    public MyISymTable<String, Value> getSymTable() {
         return symTable;
     }
 
-    public MyIList<Value> getOut() {
+    public MyIOut<Value> getOut() {
         return out;
     }
 
@@ -81,31 +81,31 @@ public class PrgState {
     }
 
     public void resetProgramState(){
-        this.out = new MyList<>();
-        this.exeStack = new MyStack<>();
-        this.fileTable = new MyDictionary<>();
-        this.symTable = new MyDictionary<>();
+        this.out = new MyOut<>();
+        this.exeStack = new MyExeStack<>();
+        this.fileTable = new MyFilename<>();
+        this.symTable = new MySymTable<>();
         this.exeStack.push(originalProgram);
     }
 
-    public MyIDictionary<StringValue, BufferedReader> getFileTable() {
+    public MyIFilename<StringValue, BufferedReader> getFileTable() {
         return this.fileTable;
     }
 
 
-    public void setSymbolTable(MyIDictionary<String, Value> symTable) {
+    public void setSymbolTable(MyISymTable<String, Value> symTable) {
         this.symTable = symTable;
     }
 
-    public void setFileTable(MyIDictionary<StringValue, BufferedReader> fileTable) {
+    public void setFileTable(MyIFilename<StringValue, BufferedReader> fileTable) {
         this.fileTable = fileTable;
     }
 
-    public void setExecutionStack(MyIStack<IStmt> stack) {
+    public void setExecutionStack(MyIExeStack<IStmt> stack) {
         this.exeStack = stack;
     }
 
-    public void setOutput(MyIList<Value> out) {
+    public void setOutput(MyIOut<Value> out) {
         this.out = out;
     }
 }

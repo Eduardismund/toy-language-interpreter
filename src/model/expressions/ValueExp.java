@@ -1,7 +1,7 @@
 package model.expressions;
 
 import model.values.Value;
-import model.adt.MyIDictionary;
+import model.adt.MyISymTable;
 
 public class ValueExp implements Exp {
     private Value e;
@@ -11,7 +11,7 @@ public class ValueExp implements Exp {
     }
 
     @Override
-    public Value eval(MyIDictionary<String, Value> dict) {
+    public Value eval(MyISymTable<String, Value> dict) {
         return e;
     }
 

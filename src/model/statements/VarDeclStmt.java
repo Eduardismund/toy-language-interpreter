@@ -8,7 +8,7 @@ import model.MyException;
 import model.PrgState;
 import model.types.Type;
 import model.values.Value;
-import model.adt.MyIDictionary;
+import model.adt.MyISymTable;
 
 public class VarDeclStmt implements IStmt {
 
@@ -22,7 +22,7 @@ public class VarDeclStmt implements IStmt {
 
     @Override
     public PrgState execute(PrgState state) throws MyException, StatementException, InterpreterException, ExpressionException, ADTException {
-        MyIDictionary<String, Value> symTable = state.getSymTable();
+        MyISymTable<String, Value> symTable = state.getSymTable();
         if (symTable.isDefined(name)) {
             throw new StatementException( "Variable is already declared!");
         } else {

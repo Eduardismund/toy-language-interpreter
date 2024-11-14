@@ -1,6 +1,5 @@
 ------- Current Program State ------
-executionStack =  |(bool a; (int v; (a = true; (if (a) then (v = 2) else (v = 3); print(v)))))| 
-
+executionStack = [bool a, NopStmt, int v, NopStmt, a = true, NopStmt, if (a) then (v = 2) else (v = 3), NopStmt, print(v)]
 , symbolTable = {}
 , output = []
 , fileTable = {}
@@ -8,9 +7,7 @@ executionStack =  |(bool a; (int v; (a = true; (if (a) then (v = 2) else (v = 3)
 
 
 ------- Current Program State ------
-executionStack =  |(int v; (a = true; (if (a) then (v = 2) else (v = 3); print(v))))| 
- |bool a| 
-
+executionStack = [int v, NopStmt, a = true, NopStmt, if (a) then (v = 2) else (v = 3), NopStmt, print(v)]
 , symbolTable = {}
 , output = []
 , fileTable = {}
@@ -18,8 +15,7 @@ executionStack =  |(int v; (a = true; (if (a) then (v = 2) else (v = 3); print(v
 
 
 ------- Current Program State ------
-executionStack =  |(int v; (a = true; (if (a) then (v = 2) else (v = 3); print(v))))| 
-
+executionStack = [int v, NopStmt, a = true, NopStmt, if (a) then (v = 2) else (v = 3), NopStmt, print(v)]
 , symbolTable = {a = false}
 , output = []
 , fileTable = {}
@@ -27,9 +23,7 @@ executionStack =  |(int v; (a = true; (if (a) then (v = 2) else (v = 3); print(v
 
 
 ------- Current Program State ------
-executionStack =  |(a = true; (if (a) then (v = 2) else (v = 3); print(v)))| 
- |int v| 
-
+executionStack = [a = true, NopStmt, if (a) then (v = 2) else (v = 3), NopStmt, print(v)]
 , symbolTable = {a = false}
 , output = []
 , fileTable = {}
@@ -37,8 +31,7 @@ executionStack =  |(a = true; (if (a) then (v = 2) else (v = 3); print(v)))|
 
 
 ------- Current Program State ------
-executionStack =  |(a = true; (if (a) then (v = 2) else (v = 3); print(v)))| 
-
+executionStack = [a = true, NopStmt, if (a) then (v = 2) else (v = 3), NopStmt, print(v)]
 , symbolTable = {a = false, v = 0}
 , output = []
 , fileTable = {}
@@ -46,9 +39,7 @@ executionStack =  |(a = true; (if (a) then (v = 2) else (v = 3); print(v)))|
 
 
 ------- Current Program State ------
-executionStack =  |(if (a) then (v = 2) else (v = 3); print(v))| 
- |a = true| 
-
+executionStack = [if (a) then (v = 2) else (v = 3), NopStmt, print(v)]
 , symbolTable = {a = false, v = 0}
 , output = []
 , fileTable = {}
@@ -56,8 +47,7 @@ executionStack =  |(if (a) then (v = 2) else (v = 3); print(v))|
 
 
 ------- Current Program State ------
-executionStack =  |(if (a) then (v = 2) else (v = 3); print(v))| 
-
+executionStack = [if (a) then (v = 2) else (v = 3), NopStmt, print(v)]
 , symbolTable = {a = true, v = 0}
 , output = []
 , fileTable = {}
@@ -65,9 +55,7 @@ executionStack =  |(if (a) then (v = 2) else (v = 3); print(v))|
 
 
 ------- Current Program State ------
-executionStack =  |print(v)| 
- |if (a) then (v = 2) else (v = 3)| 
-
+executionStack = [print(v)]
 , symbolTable = {a = true, v = 0}
 , output = []
 , fileTable = {}
@@ -75,9 +63,7 @@ executionStack =  |print(v)|
 
 
 ------- Current Program State ------
-executionStack =  |print(v)| 
- |v = 2| 
-
+executionStack = [print(v)]
 , symbolTable = {a = true, v = 0}
 , output = []
 , fileTable = {}
@@ -85,8 +71,7 @@ executionStack =  |print(v)|
 
 
 ------- Current Program State ------
-executionStack =  |print(v)| 
-
+executionStack = [print(v)]
 , symbolTable = {a = true, v = 2}
 , output = []
 , fileTable = {}
@@ -94,7 +79,7 @@ executionStack =  |print(v)|
 
 
 ------- Current Program State ------
-executionStack = 
+executionStack = []
 , symbolTable = {a = true, v = 2}
 , output = [2]
 , fileTable = {}

@@ -2,7 +2,7 @@ package model.adt;
 
 import exceptions.ADTException;
 
-public interface MyIDictionary<K, V> {
+public interface MyISymTable<K, V> {
     void put(K key, V value) throws ADTException;
     void remove(K key) throws ADTException;
     boolean isDefined(K key);

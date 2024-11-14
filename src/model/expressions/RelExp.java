@@ -8,7 +8,7 @@ import model.types.IntType;
 import model.values.BoolValue;
 import model.values.IntValue;
 import model.values.Value;
-import model.adt.MyIDictionary;
+import model.adt.MyISymTable;
 
 public class RelExp implements Exp{
 
@@ -26,7 +26,7 @@ public class RelExp implements Exp{
 
 
     @Override
-    public Value eval(MyIDictionary<String, Value> dict) throws MyException, MyException, ExpressionException, InterpreterException, ADTException {
+    public Value eval(MyISymTable<String, Value> dict) throws MyException, MyException, ExpressionException, InterpreterException, ADTException {
 
         Value value1 = exp1.eval(dict);
         if(!value1.getType().equals(classType)){

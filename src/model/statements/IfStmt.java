@@ -9,7 +9,7 @@ import model.PrgState;
 import model.expressions.Exp;
 import model.values.BoolValue;
 import model.values.Value;
-import model.adt.MyIStack;
+import model.adt.MyIExeStack;
 
 public class IfStmt implements IStmt {
     private IStmt thenStmt;
@@ -25,7 +25,7 @@ public class IfStmt implements IStmt {
     @Override
     public PrgState execute(PrgState state) throws MyException, StatementException, ExpressionException, InterpreterException, ADTException {
         Value v = exp.eval(state.getSymTable());
-        MyIStack<IStmt> stack = state.getExeStack();
+        MyIExeStack<IStmt> stack = state.getExeStack();
         if (v instanceof BoolValue) {
             if (((BoolValue) v).getVal()) {
                 stack.push(thenStmt);

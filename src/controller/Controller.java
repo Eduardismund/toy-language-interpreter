@@ -6,7 +6,7 @@ import exceptions.*;
 import model.MyException;
 import model.statements.IStmt;
 import model.PrgState;
-import model.adt.MyIStack;
+import model.adt.MyIExeStack;
 
 import java.io.FileNotFoundException;
 
@@ -26,7 +26,7 @@ public class Controller {
     }
 
     private PrgState oneStep(PrgState state) throws MyException, ADTException, StatementException, ExpressionException, InterpreterException, FileNotFoundException, ControllerException {
-        MyIStack<IStmt> stk=state.getExeStack();
+        MyIExeStack<IStmt> stk=state.getExeStack();
         if(stk.isEmpty()) throw new ControllerException("prgstate stack is empty");
         IStmt crtStmt = stk.pop();
         return crtStmt.execute(state);

@@ -3,7 +3,7 @@ package model.adt;
 import java.util.Iterator;
 import java.util.List;
 
-public interface MyIList<T> {
+public interface MyIOut<T> {
     boolean isEmpty();
     int size();
     Iterator<T> iterator();

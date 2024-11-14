@@ -5,7 +5,7 @@ import exceptions.InterpreterException;
 
 import java.util.List;
 
-public interface MyIStack<T> {
+public interface MyIExeStack<T> {
     void push(T item);
     T pop() throws ADTException, InterpreterException;
     T peek() throws ADTException, InterpreterException;

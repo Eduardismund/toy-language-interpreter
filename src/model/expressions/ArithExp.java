@@ -6,7 +6,7 @@ import exceptions.InterpreterException;
 import model.types.IntType;
 import model.values.IntValue;
 import model.values.Value;
-import model.adt.MyIDictionary;
+import model.adt.MyISymTable;
 import model.MyException;
 
 public class ArithExp implements Exp{
@@ -22,7 +22,7 @@ public class ArithExp implements Exp{
     }
 
     @Override
-    public Value eval(MyIDictionary<String, Value> dict) throws MyException, ExpressionException, InterpreterException, ADTException {
+    public Value eval(MyISymTable<String, Value> dict) throws MyException, ExpressionException, InterpreterException, ADTException {
         Value v1 = e1.eval(dict);
         if(v1.getType().equals(new IntType())){
             Value v2 = e2.eval(dict);

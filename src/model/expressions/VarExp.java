@@ -3,7 +3,7 @@ package model.expressions;
 import exceptions.ADTException;
 import exceptions.ExpressionException;
 import model.values.Value;
-import model.adt.MyIDictionary;
+import model.adt.MyISymTable;
 
 public class VarExp implements Exp{
 
@@ -19,7 +19,7 @@ public class VarExp implements Exp{
     }
 
     @Override
-    public Value eval(MyIDictionary<String, Value> dict) throws ExpressionException, ADTException {
+    public Value eval(MyISymTable<String, Value> dict) throws ExpressionException, ADTException {
         return dict.lookup(this.id);
     }
 

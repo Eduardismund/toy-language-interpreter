@@ -7,7 +7,7 @@ import model.MyException;
 import model.types.BoolType;
 import model.values.BoolValue;
 import model.values.Value;
-import model.adt.MyIDictionary;
+import model.adt.MyISymTable;
 
 public class LogicExp implements Exp{
 
@@ -23,7 +23,7 @@ public class LogicExp implements Exp{
 
 
     @Override
-    public Value eval(MyIDictionary<String, Value> dict) throws ExpressionException, InterpreterException, MyException, ADTException {
+    public Value eval(MyISymTable<String, Value> dict) throws ExpressionException, InterpreterException, MyException, ADTException {
         Value v1 = e1.eval(dict);
         Value v2 = e2.eval(dict);
 

@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class MyList<T> implements MyIList<T> {
+public class MyOut<T> implements MyIOut<T> {
 
     private final List<T> list;
 
-    public MyList() {
+    public MyOut() {
         list = new ArrayList<T>();
     }
 

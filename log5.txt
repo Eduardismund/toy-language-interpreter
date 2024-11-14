@@ -1,6 +1,5 @@
 ------- Current Program State ------
-executionStack =  |(string varf; (varf = test.in; (open(varf); (int varc; (readFile(varf,varc); (print(varc); (readFile(varf,varc); (print(varc); closeFile(varf)))))))))| 
-
+executionStack = [string varf, NopStmt, varf = test.in, NopStmt, open(varf), NopStmt, int varc, NopStmt, readFile(varf,varc), NopStmt, print(varc), NopStmt, readFile(varf,varc), NopStmt, print(varc), NopStmt, closeFile(varf)]
 , symbolTable = {}
 , output = []
 , fileTable = {}
@@ -8,9 +7,7 @@ executionStack =  |(string varf; (varf = test.in; (open(varf); (int varc; (readF
 
 
 ------- Current Program State ------
-executionStack =  |(varf = test.in; (open(varf); (int varc; (readFile(varf,varc); (print(varc); (readFile(varf,varc); (print(varc); closeFile(varf))))))))| 
- |string varf| 
-
+executionStack = [varf = test.in, NopStmt, open(varf), NopStmt, int varc, NopStmt, readFile(varf,varc), NopStmt, print(varc), NopStmt, readFile(varf,varc), NopStmt, print(varc), NopStmt, closeFile(varf)]
 , symbolTable = {}
 , output = []
 , fileTable = {}
@@ -18,8 +15,7 @@ executionStack =  |(varf = test.in; (open(varf); (int varc; (readFile(varf,varc)
 
 
 ------- Current Program State ------
-executionStack =  |(varf = test.in; (open(varf); (int varc; (readFile(varf,varc); (print(varc); (readFile(varf,varc); (print(varc); closeFile(varf))))))))| 
-
+executionStack = [varf = test.in, NopStmt, open(varf), NopStmt, int varc, NopStmt, readFile(varf,varc), NopStmt, print(varc), NopStmt, readFile(varf,varc), NopStmt, print(varc), NopStmt, closeFile(varf)]
 , symbolTable = {varf =  }
 , output = []
 , fileTable = {}
@@ -27,9 +23,7 @@ executionStack =  |(varf = test.in; (open(varf); (int varc; (readFile(varf,varc)
 
 
 ------- Current Program State ------
-executionStack =  |(open(varf); (int varc; (readFile(varf,varc); (print(varc); (readFile(varf,varc); (print(varc); closeFile(varf)))))))| 
- |varf = test.in| 
-
+executionStack = [open(varf), NopStmt, int varc, NopStmt, readFile(varf,varc), NopStmt, print(varc), NopStmt, readFile(varf,varc), NopStmt, print(varc), NopStmt, closeFile(varf)]
 , symbolTable = {varf =  }
 , output = []
 , fileTable = {}
@@ -37,8 +31,7 @@ executionStack =  |(open(varf); (int varc; (readFile(varf,varc); (print(varc); (
 
 
 ------- Current Program State ------
-executionStack =  |(open(varf); (int varc; (readFile(varf,varc); (print(varc); (readFile(varf,varc); (print(varc); closeFile(varf)))))))| 
-
+executionStack = [open(varf), NopStmt, int varc, NopStmt, readFile(varf,varc), NopStmt, print(varc), NopStmt, readFile(varf,varc), NopStmt, print(varc), NopStmt, closeFile(varf)]
 , symbolTable = {varf = test.in}
 , output = []
 , fileTable = {}
@@ -46,9 +39,7 @@ executionStack =  |(open(varf); (int varc; (readFile(varf,varc); (print(varc); (
 
 
 ------- Current Program State ------
-executionStack =  |(int varc; (readFile(varf,varc); (print(varc); (readFile(varf,varc); (print(varc); closeFile(varf))))))| 
- |open(varf)| 
-
+executionStack = [int varc, NopStmt, readFile(varf,varc), NopStmt, print(varc), NopStmt, readFile(varf,varc), NopStmt, print(varc), NopStmt, closeFile(varf)]
 , symbolTable = {varf = test.in}
 , output = []
 , fileTable = {}
@@ -56,111 +47,95 @@ executionStack =  |(int varc; (readFile(varf,varc); (print(varc); (readFile(varf
 
 
 ------- Current Program State ------
-executionStack =  |(int varc; (readFile(varf,varc); (print(varc); (readFile(varf,varc); (print(varc); closeFile(varf))))))| 
-
+executionStack = [int varc, NopStmt, readFile(varf,varc), NopStmt, print(varc), NopStmt, readFile(varf,varc), NopStmt, print(varc), NopStmt, closeFile(varf)]
 , symbolTable = {varf = test.in}
 , output = []
-, fileTable = {test.in = java.io.BufferedReader@341b3de6}
+, fileTable = {test.in = java.io.BufferedReader@5b37e0d2}
 , originalProgram = (string varf; (varf = test.in; (open(varf); (int varc; (readFile(varf,varc); (print(varc); (readFile(varf,varc); (print(varc); closeFile(varf)))))))))
 
 
 ------- Current Program State ------
-executionStack =  |(readFile(varf,varc); (print(varc); (readFile(varf,varc); (print(varc); closeFile(varf)))))| 
- |int varc| 
-
+executionStack = [readFile(varf,varc), NopStmt, print(varc), NopStmt, readFile(varf,varc), NopStmt, print(varc), NopStmt, closeFile(varf)]
 , symbolTable = {varf = test.in}
 , output = []
-, fileTable = {test.in = java.io.BufferedReader@341b3de6}
+, fileTable = {test.in = java.io.BufferedReader@5b37e0d2}
 , originalProgram = (string varf; (varf = test.in; (open(varf); (int varc; (readFile(varf,varc); (print(varc); (readFile(varf,varc); (print(varc); closeFile(varf)))))))))
 
 
 ------- Current Program State ------
-executionStack =  |(readFile(varf,varc); (print(varc); (readFile(varf,varc); (print(varc); closeFile(varf)))))| 
-
+executionStack = [readFile(varf,varc), NopStmt, print(varc), NopStmt, readFile(varf,varc), NopStmt, print(varc), NopStmt, closeFile(varf)]
 , symbolTable = {varf = test.in, varc = 0}
 , output = []
-, fileTable = {test.in = java.io.BufferedReader@341b3de6}
+, fileTable = {test.in = java.io.BufferedReader@5b37e0d2}
 , originalProgram = (string varf; (varf = test.in; (open(varf); (int varc; (readFile(varf,varc); (print(varc); (readFile(varf,varc); (print(varc); closeFile(varf)))))))))
 
 
 ------- Current Program State ------
-executionStack =  |(print(varc); (readFile(varf,varc); (print(varc); closeFile(varf))))| 
- |readFile(varf,varc)| 
-
+executionStack = [print(varc), NopStmt, readFile(varf,varc), NopStmt, print(varc), NopStmt, closeFile(varf)]
 , symbolTable = {varf = test.in, varc = 0}
 , output = []
-, fileTable = {test.in = java.io.BufferedReader@341b3de6}
+, fileTable = {test.in = java.io.BufferedReader@5b37e0d2}
 , originalProgram = (string varf; (varf = test.in; (open(varf); (int varc; (readFile(varf,varc); (print(varc); (readFile(varf,varc); (print(varc); closeFile(varf)))))))))
 
 
 ------- Current Program State ------
-executionStack =  |(print(varc); (readFile(varf,varc); (print(varc); closeFile(varf))))| 
-
+executionStack = [print(varc), NopStmt, readFile(varf,varc), NopStmt, print(varc), NopStmt, closeFile(varf)]
 , symbolTable = {varf = test.in, varc = 15}
 , output = []
-, fileTable = {test.in = java.io.BufferedReader@341b3de6}
+, fileTable = {test.in = java.io.BufferedReader@5b37e0d2}
 , originalProgram = (string varf; (varf = test.in; (open(varf); (int varc; (readFile(varf,varc); (print(varc); (readFile(varf,varc); (print(varc); closeFile(varf)))))))))
 
 
 ------- Current Program State ------
-executionStack =  |(readFile(varf,varc); (print(varc); closeFile(varf)))| 
- |print(varc)| 
-
+executionStack = [readFile(varf,varc), NopStmt, print(varc), NopStmt, closeFile(varf)]
 , symbolTable = {varf = test.in, varc = 15}
 , output = []
-, fileTable = {test.in = java.io.BufferedReader@341b3de6}
+, fileTable = {test.in = java.io.BufferedReader@5b37e0d2}
 , originalProgram = (string varf; (varf = test.in; (open(varf); (int varc; (readFile(varf,varc); (print(varc); (readFile(varf,varc); (print(varc); closeFile(varf)))))))))
 
 
 ------- Current Program State ------
-executionStack =  |(readFile(varf,varc); (print(varc); closeFile(varf)))| 
-
+executionStack = [readFile(varf,varc), NopStmt, print(varc), NopStmt, closeFile(varf)]
 , symbolTable = {varf = test.in, varc = 15}
 , output = [15]
-, fileTable = {test.in = java.io.BufferedReader@341b3de6}
+, fileTable = {test.in = java.io.BufferedReader@5b37e0d2}
 , originalProgram = (string varf; (varf = test.in; (open(varf); (int varc; (readFile(varf,varc); (print(varc); (readFile(varf,varc); (print(varc); closeFile(varf)))))))))
 
 
 ------- Current Program State ------
-executionStack =  |(print(varc); closeFile(varf))| 
- |readFile(varf,varc)| 
-
+executionStack = [print(varc), NopStmt, closeFile(varf)]
 , symbolTable = {varf = test.in, varc = 15}
 , output = [15]
-, fileTable = {test.in = java.io.BufferedReader@341b3de6}
+, fileTable = {test.in = java.io.BufferedReader@5b37e0d2}
 , originalProgram = (string varf; (varf = test.in; (open(varf); (int varc; (readFile(varf,varc); (print(varc); (readFile(varf,varc); (print(varc); closeFile(varf)))))))))
 
 
 ------- Current Program State ------
-executionStack =  |(print(varc); closeFile(varf))| 
-
+executionStack = [print(varc), NopStmt, closeFile(varf)]
 , symbolTable = {varf = test.in, varc = 50}
 , output = [15]
-, fileTable = {test.in = java.io.BufferedReader@341b3de6}
+, fileTable = {test.in = java.io.BufferedReader@5b37e0d2}
 , originalProgram = (string varf; (varf = test.in; (open(varf); (int varc; (readFile(varf,varc); (print(varc); (readFile(varf,varc); (print(varc); closeFile(varf)))))))))
 
 
 ------- Current Program State ------
-executionStack =  |closeFile(varf)| 
- |print(varc)| 
-
+executionStack = [closeFile(varf)]
 , symbolTable = {varf = test.in, varc = 50}
 , output = [15]
-, fileTable = {test.in = java.io.BufferedReader@341b3de6}
+, fileTable = {test.in = java.io.BufferedReader@5b37e0d2}
 , originalProgram = (string varf; (varf = test.in; (open(varf); (int varc; (readFile(varf,varc); (print(varc); (readFile(varf,varc); (print(varc); closeFile(varf)))))))))
 
 
 ------- Current Program State ------
-executionStack =  |closeFile(varf)| 
-
+executionStack = [closeFile(varf)]
 , symbolTable = {varf = test.in, varc = 50}
 , output = [15, 50]
-, fileTable = {test.in = java.io.BufferedReader@341b3de6}
+, fileTable = {test.in = java.io.BufferedReader@5b37e0d2}
 , originalProgram = (string varf; (varf = test.in; (open(varf); (int varc; (readFile(varf,varc); (print(varc); (readFile(varf,varc); (print(varc); closeFile(varf)))))))))
 
 
 ------- Current Program State ------
-executionStack = 
+executionStack = []
 , symbolTable = {varf = test.in, varc = 50}
 , output = [15, 50]
 , fileTable = {}

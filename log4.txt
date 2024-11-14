@@ -1,6 +1,5 @@
 ------- Current Program State ------
-executionStack =  |(bool b; (int c; (b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2))))| 
-
+executionStack = [bool b, NopStmt, int c, NopStmt, b = true, NopStmt, if (b && true) then (c = 0 + 4) else (c = 0 + 2)]
 , symbolTable = {}
 , output = []
 , fileTable = {}
@@ -8,9 +7,7 @@ executionStack =  |(bool b; (int c; (b = true; if (b && true) then (c = 0 + 4) e
 
 
 ------- Current Program State ------
-executionStack =  |(int c; (b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2)))| 
- |bool b| 
-
+executionStack = [int c, NopStmt, b = true, NopStmt, if (b && true) then (c = 0 + 4) else (c = 0 + 2)]
 , symbolTable = {}
 , output = []
 , fileTable = {}
@@ -18,8 +15,7 @@ executionStack =  |(int c; (b = true; if (b && true) then (c = 0 + 4) else (c = 
 
 
 ------- Current Program State ------
-executionStack =  |(int c; (b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2)))| 
-
+executionStack = [int c, NopStmt, b = true, NopStmt, if (b && true) then (c = 0 + 4) else (c = 0 + 2)]
 , symbolTable = {b = false}
 , output = []
 , fileTable = {}
@@ -27,9 +23,7 @@ executionStack =  |(int c; (b = true; if (b && true) then (c = 0 + 4) else (c = 
 
 
 ------- Current Program State ------
-executionStack =  |(b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2))| 
- |int c| 
-
+executionStack = [b = true, NopStmt, if (b && true) then (c = 0 + 4) else (c = 0 + 2)]
 , symbolTable = {b = false}
 , output = []
 , fileTable = {}
@@ -37,8 +31,7 @@ executionStack =  |(b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2))|
 
 
 ------- Current Program State ------
-executionStack =  |(b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2))| 
-
+executionStack = [b = true, NopStmt, if (b && true) then (c = 0 + 4) else (c = 0 + 2)]
 , symbolTable = {b = false, c = 0}
 , output = []
 , fileTable = {}
@@ -46,9 +39,7 @@ executionStack =  |(b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2))|
 
 
 ------- Current Program State ------
-executionStack =  |if (b && true) then (c = 0 + 4) else (c = 0 + 2)| 
- |b = true| 
-
+executionStack = [if (b && true) then (c = 0 + 4) else (c = 0 + 2)]
 , symbolTable = {b = false, c = 0}
 , output = []
 , fileTable = {}
@@ -56,8 +47,7 @@ executionStack =  |if (b && true) then (c = 0 + 4) else (c = 0 + 2)|
 
 
 ------- Current Program State ------
-executionStack =  |if (b && true) then (c = 0 + 4) else (c = 0 + 2)| 
-
+executionStack = [if (b && true) then (c = 0 + 4) else (c = 0 + 2)]
 , symbolTable = {b = true, c = 0}
 , output = []
 , fileTable = {}
@@ -65,8 +55,7 @@ executionStack =  |if (b && true) then (c = 0 + 4) else (c = 0 + 2)|
 
 
 ------- Current Program State ------
-executionStack =  |c = 0 + 4| 
-
+executionStack = [c = 0 + 4]
 , symbolTable = {b = true, c = 0}
 , output = []
 , fileTable = {}
@@ -74,7 +63,7 @@ executionStack =  |c = 0 + 4|
 
 
 ------- Current Program State ------
-executionStack = 
+executionStack = []
 , symbolTable = {b = true, c = 4}
 , output = []
 , fileTable = {}

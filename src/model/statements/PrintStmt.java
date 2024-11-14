@@ -7,7 +7,7 @@ import model.MyException;
 import model.PrgState;
 import model.expressions.Exp;
 import model.values.Value;
-import model.adt.MyIList;
+import model.adt.MyIOut;
 
 public class PrintStmt implements IStmt {
     private Exp exp;
@@ -26,7 +26,7 @@ public class PrintStmt implements IStmt {
 
     @Override
     public PrgState execute(PrgState state) throws MyException, ExpressionException, InterpreterException, ADTException {
-        MyIList<Value> out = state.getOut();
+        MyIOut<Value> out = state.getOut();
         Value value = exp.eval(state.getSymTable());
         out.add(value);
         state.setOutput(out);

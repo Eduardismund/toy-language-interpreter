@@ -6,11 +6,11 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Stack;
 
-public class MyStack<T> implements MyIStack<T> {
+public class MyExeStack<T> implements MyIExeStack<T> {
 
     private Stack<T> stack;
 
-    public MyStack(){
+    public MyExeStack(){
         stack = new Stack<>();
     }
 

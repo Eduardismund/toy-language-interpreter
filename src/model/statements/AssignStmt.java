@@ -9,7 +9,7 @@ import model.PrgState;
 import model.expressions.Exp;
 import model.types.Type;
 import model.values.Value;
-import model.adt.MyIDictionary;
+import model.adt.MyISymTable;
 
 public class AssignStmt implements IStmt {
     private String id;
@@ -23,7 +23,7 @@ public class AssignStmt implements IStmt {
 
     @Override
     public PrgState execute(PrgState state) throws MyException, StatementException, ExpressionException, InterpreterException, ADTException {
-        MyIDictionary<String, Value> symTable = state.getSymTable();
+        MyISymTable<String, Value> symTable = state.getSymTable();
         if(symTable.isDefined(id)){
             Value val = exp.eval(symTable);
             Type typeId = symTable.lookup(id).getType();

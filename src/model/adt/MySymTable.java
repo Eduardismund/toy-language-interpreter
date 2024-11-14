@@ -5,11 +5,11 @@ import exceptions.ADTException;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MyDictionary<K, V> implements MyIDictionary<K, V> {
+public class MySymTable<K, V> implements MyISymTable<K, V> {
 
     private Map<K, V> map;
 
-    public MyDictionary() {
+    public MySymTable() {
         map = new HashMap<K, V>();
     }
 
