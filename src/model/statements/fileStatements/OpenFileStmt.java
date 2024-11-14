@@ -58,7 +58,7 @@ public class OpenFileStmt implements IStmt {
         }
         state.setSymbolTable(symbolTable);
         state.setFileTable(fileTable);
-        return state;
+        return null;
     }
 
     @Override

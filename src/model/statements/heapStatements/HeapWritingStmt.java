@@ -54,7 +54,7 @@ public class HeapWritingStmt implements IStmt {
         state.setHeap(heap);
         state.setSymbolTable(symTable);
 
-        return state;
+        return null;
 
     }
 

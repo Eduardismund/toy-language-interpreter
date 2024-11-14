@@ -29,7 +29,7 @@ public class VarDeclStmt implements IStmt {
             symTable.put(name, type.defaultValue());
         }
         state.setSymbolTable(symTable);
-        return state;
+        return null;
     }
 
     @Override

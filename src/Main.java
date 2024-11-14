@@ -27,6 +27,7 @@ public class Main {
             Controller controller7 = setController(examples[6], "log7.txt");
             Controller controller8 = setController(examples[7], "log8.txt");
             Controller controller9 = setController(examples[8], "log9.txt");
+            Controller controller10 = setController(examples[9], "log10.txt");
 
 
             TextMenu menu = new TextMenu();
@@ -40,6 +41,7 @@ public class Main {
             menu.addCommand(new RunCommand("7", examples[6].toString(), controller7));
             menu.addCommand(new RunCommand("8", examples[7].toString(), controller8));
             menu.addCommand(new RunCommand("9", examples[8].toString(), controller9));
+            menu.addCommand(new RunCommand("10", examples[9].toString(), controller10));
 
             menu.show();
         } catch (RepoException | ViewException e) {

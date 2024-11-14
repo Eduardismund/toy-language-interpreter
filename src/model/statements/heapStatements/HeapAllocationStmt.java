@@ -50,7 +50,7 @@ public class HeapAllocationStmt implements IStmt {
 
         state.setSymbolTable(symTale);
         state.setHeap(heap);
-        return state;
+        return null;
         ///return null;
     }
 

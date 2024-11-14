@@ -55,7 +55,7 @@ public class TextMenu {
             }
             c.execute();
 
-            executedCommands.put(line, true);
+//            executedCommands.put(line, true);
         }
     }
 }

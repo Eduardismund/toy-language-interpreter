@@ -17,6 +17,39 @@ import model.values.StringValue;
 import model.values.Value;
 
 public class Examples {
+
+    private static IStmt createExample10() {
+        return new CompStmt(
+                new VarDeclStmt(new IntType(), "v"),
+                new CompStmt(
+                        new VarDeclStmt(new RefType(new IntType()), "a"),
+                        new CompStmt(
+                                new AssignStmt("v", new ValueExp(new IntValue(10))),
+                                new CompStmt(
+                                        new HeapAllocationStmt("a", new ValueExp(new IntValue(22))),
+                                        new CompStmt(
+                                                new ForkStmt(
+                                                        new CompStmt(
+                                                                new HeapWritingStmt("a", new ValueExp(new IntValue(30))),
+                                                                new CompStmt(
+                                                                        new AssignStmt("v", new ValueExp(new IntValue(32))),
+                                                                        new CompStmt(
+                                                                                new PrintStmt(new VarExp("v")),
+                                                                                new PrintStmt(new HeapReadingExp(new VarExp("a")))
+                                                                        )
+                                                                )
+                                                        )
+                                                ),
+                                                new CompStmt(
+                                                        new PrintStmt(new VarExp("v")),
+                                                        new PrintStmt(new HeapReadingExp(new VarExp("a")))
+                                                )
+                                        )
+                                )
+                        )
+                )
+        );
+    }
     //Example:  int v; v=4; (while (v>0) print(v);v=v-1);print(v)
     private static IStmt createExample9(){
         return new CompStmt(
@@ -166,6 +199,6 @@ public class Examples {
 
     public static IStmt[] exampleList(){
         return new IStmt[]{createExample1(), createExample2(), createExample3(),createExample4(), createExample5(),
-                createExample6(), createExample7(), createExample8(), createExample9()};
+                createExample6(), createExample7(), createExample8(), createExample9(), createExample10()};
     }
 }

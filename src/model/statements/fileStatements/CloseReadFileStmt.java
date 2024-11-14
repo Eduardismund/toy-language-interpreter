@@ -50,7 +50,7 @@ public class CloseReadFileStmt implements IStmt {
         }
         state.setSymbolTable(symTable);
         state.setFileTable(fileTable);
-        return state;
+        return null;
     }
 
         @Override

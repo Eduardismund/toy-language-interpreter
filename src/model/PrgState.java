@@ -1,5 +1,6 @@
 package model;
 
+import exceptions.*;
 import model.adt.*;
 import model.statements.CompStmt;
 import model.statements.IStmt;
@@ -8,6 +9,7 @@ import model.values.StringValue;
 import model.values.Value;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -18,6 +20,22 @@ public class PrgState {
     private IStmt originalProgram;
     private MyIDictionary<StringValue, BufferedReader> fileTable;
     private MyIHeap<Integer,Value> heap;
+    private int id;
+    private static int currentId = 1;
+
+    public Boolean isNotCompleted(){
+        return !this.exeStack.isEmpty();
+    }
+
+    public synchronized void setId(){
+        this.id =currentId;
+        currentId++;
+    }
+    public PrgState oneStep() throws MyException, ADTException, StatementException, ExpressionException, InterpreterException, FileNotFoundException {
+        if(exeStack.isEmpty()) throw new MyException("prgstate stack is empty");
+        IStmt crtStmt = exeStack.pop();
+        return crtStmt.execute(this);
+    }
 
     public PrgState(MyIStack<IStmt> exeStack, MyIDictionary<String, Value> symTable, MyIList<Value> out,
                     IStmt originalProgram, MyIDictionary<StringValue, BufferedReader> fileTable, MyIHeap<Integer,Value> heap) {
@@ -28,6 +46,11 @@ public class PrgState {
         this.exeStack.push(originalProgram);
         this.fileTable = fileTable;
         this.heap = heap;
+        setId();
+    }
+
+    public Integer getId_Thread(){
+        return this.id;
     }
 
     public MyIHeap<Integer,Value> getHeap(){
@@ -78,6 +101,7 @@ public class PrgState {
     @Override
     public String toString() {
         String result = "------- Current Program State ------\n";
+        result += "ID = " + id + "\n";
         result += "executionStack = \n" + exeStack + "\n";
         result += ", symbolTable = " + symTable + "\n";
         result += ", output = " + out + "\n";

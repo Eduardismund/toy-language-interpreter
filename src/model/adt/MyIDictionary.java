@@ -21,4 +21,6 @@ public interface MyIDictionary<K, V> {
     void setMap(Map<K, V> map) throws ADTException;
 
     Collection<V> values();
+
+    MyIDictionary<K, V> deepCopy() throws ADTException;
 }

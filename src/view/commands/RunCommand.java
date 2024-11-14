@@ -17,16 +17,16 @@ public class RunCommand extends Command{
     @Override
     public void execute() throws ViewException {
         try{
-            controller.allStep();
+            controller.allSteps();
         } catch (Exception exception){
             System.out.println(exception.getMessage());
         }
-
-        try{
-            controller.resetProgramStates();
-        } catch (MyException | RepoException e) {
-            throw new RuntimeException(e);
-        }
+//
+//        try{
+//            controller.resetProgramStates();
+//        } catch (MyException | RepoException e) {
+//            System.out.println(e.getMessage());
+//        }
     }
 
     public void resetProgramStates() throws MyException, RepoException {

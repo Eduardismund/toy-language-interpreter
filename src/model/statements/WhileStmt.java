@@ -41,7 +41,7 @@ public class WhileStmt implements IStmt{
         }
 
         state.setExecutionStack(exeStack);
-        return state;
+        return null;
     }
 
     @Override

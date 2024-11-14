@@ -39,7 +39,7 @@ public class AssignStmt implements IStmt {
             throw new StatementException("the used variable " + id + " was not declared before!");
         }
         state.setSymbolTable(symTable);
-        return state;
+        return null;
     }
 
     @Override

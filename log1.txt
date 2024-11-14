@@ -1,4 +1,6 @@
+
 ------- Current Program State ------
+ID = 1
 executionStack = 
 |(int v; (v = 2; print(v)))|
 
@@ -10,6 +12,7 @@ executionStack =
 
 
 ------- Current Program State ------
+ID = 1
 executionStack = 
 |int v|
 |(v = 2; print(v))|
@@ -22,6 +25,7 @@ executionStack =
 
 
 ------- Current Program State ------
+ID = 1
 executionStack = 
 |(v = 2; print(v))|
 
@@ -33,6 +37,7 @@ executionStack =
 
 
 ------- Current Program State ------
+ID = 1
 executionStack = 
 |v = 2|
 |print(v)|
@@ -45,6 +50,7 @@ executionStack =
 
 
 ------- Current Program State ------
+ID = 1
 executionStack = 
 |print(v)|
 
@@ -56,6 +62,7 @@ executionStack =
 
 
 ------- Current Program State ------
+ID = 1
 executionStack = 
 
 , symbolTable = {v -> 2}

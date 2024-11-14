@@ -69,7 +69,7 @@ public class ReadFileStatement implements IStmt {
             throw new StatementException("Could not read from file");
         }
         state.setSymbolTable(symbolTable);
-        return state;
+        return null;
     }
 
     @Override

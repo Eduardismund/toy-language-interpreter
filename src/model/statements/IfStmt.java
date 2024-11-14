@@ -37,7 +37,7 @@ public class IfStmt implements IStmt {
             throw new StatementException("Expression does not evaluate to a BoolValue!");
         }
         state.setExecutionStack(stack);
-        return state;
+        return null;
     }
 
     @Override

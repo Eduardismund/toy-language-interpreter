@@ -83,4 +83,13 @@ public class MyDictionary<K, V> implements MyIDictionary<K, V> {
         result += "}";
         return result;
     }
+
+    @Override
+    public MyIDictionary<K, V> deepCopy() throws ADTException {
+        MyIDictionary<K, V> result = new MyDictionary<>();
+        for(K key : this.map.keySet()){
+            result.put(key,map.get(key));
+        }
+        return result;
+    }
 }
