@@ -41,6 +41,10 @@ public class TextMenu {
                 case "3" -> ClearFile.clear("log3.txt");
                 case "4" -> ClearFile.clear("log4.txt");
                 case "5" -> ClearFile.clear("log5.txt");
+                case "6" -> ClearFile.clear("log6.txt");
+                case "7" -> ClearFile.clear("log7.txt");
+                case "8" -> ClearFile.clear("log8.txt");
+
             }
             Command c = commands.get(line);
             System.out.println(line);

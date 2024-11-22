@@ -24,7 +24,8 @@ public class IfStmt implements IStmt {
 
     @Override
     public PrgState execute(PrgState state) throws MyException, StatementException, ExpressionException, InterpreterException, ADTException {
-        Value v = exp.eval(state.getSymTable());
+        final var heap = state.getHeap();
+        Value v = exp.eval(state.getSymTable(), heap);
         MyIStack<IStmt> stack = state.getExeStack();
         if (v instanceof BoolValue) {
             if (((BoolValue) v).getVal()) {

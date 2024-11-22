@@ -24,8 +24,9 @@ public class AssignStmt implements IStmt {
     @Override
     public PrgState execute(PrgState state) throws MyException, StatementException, ExpressionException, InterpreterException, ADTException {
         MyIDictionary<String, Value> symTable = state.getSymTable();
+        final var heap = state.getHeap();
         if(symTable.isDefined(id)){
-            Value val = exp.eval(symTable);
+            Value val = exp.eval(symTable, heap);
             Type typeId = symTable.lookup(id).getType();
 
             if(val.getType().equals(typeId)){

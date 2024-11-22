@@ -27,7 +27,8 @@ public class PrintStmt implements IStmt {
     @Override
     public PrgState execute(PrgState state) throws MyException, ExpressionException, InterpreterException, ADTException {
         MyIList<Value> out = state.getOut();
-        Value value = exp.eval(state.getSymTable());
+        final var heap = state.getHeap();
+        Value value = exp.eval(state.getSymTable(), heap);
         out.add(value);
         state.setOutput(out);
         return state;

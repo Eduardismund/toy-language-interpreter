@@ -17,15 +17,21 @@ public class PrgState {
     private MyIList<Value> out;
     private IStmt originalProgram;
     private MyIDictionary<StringValue, BufferedReader> fileTable;
+    private MyIHeap<Integer,Value> heap;
 
     public PrgState(MyIStack<IStmt> exeStack, MyIDictionary<String, Value> symTable, MyIList<Value> out,
-                    IStmt originalProgram, MyIDictionary<StringValue, BufferedReader> fileTable) {
+                    IStmt originalProgram, MyIDictionary<StringValue, BufferedReader> fileTable, MyIHeap<Integer,Value> heap) {
         this.exeStack = exeStack;
         this.symTable = symTable;
         this.out = out;
         this.originalProgram = originalProgram.deepCopy();
         this.exeStack.push(originalProgram);
         this.fileTable = fileTable;
+        this.heap = heap;
+    }
+
+    public MyIHeap<Integer,Value> getHeap(){
+        return heap;
     }
 
     public MyIStack<IStmt> getExeStack() {
@@ -72,10 +78,11 @@ public class PrgState {
     @Override
     public String toString() {
         String result = "------- Current Program State ------\n";
-        result += "executionStack = " + distinctStataments() + "\n";
+        result += "executionStack = \n" + exeStack + "\n";
         result += ", symbolTable = " + symTable + "\n";
         result += ", output = " + out + "\n";
         result += ", fileTable = " + fileTable + "\n";
+        result += ", heap = " + heap.toString() + "\n";
         result += ", originalProgram = " + originalProgram + "\n\n";
         return result;
     }
@@ -92,7 +99,9 @@ public class PrgState {
         return this.fileTable;
     }
 
-
+    public void setHeap(MyIHeap<Integer, Value> heap) {
+        this.heap = heap;
+    }
     public void setSymbolTable(MyIDictionary<String, Value> symTable) {
         this.symTable = symTable;
     }

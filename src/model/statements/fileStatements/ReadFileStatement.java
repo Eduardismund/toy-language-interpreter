@@ -1,4 +1,4 @@
-package model.statements;
+package model.statements.fileStatements;
 
 import exceptions.ADTException;
 import exceptions.ExpressionException;
@@ -7,6 +7,7 @@ import exceptions.StatementException;
 import model.MyException;
 import model.PrgState;
 import model.expressions.Exp;
+import model.statements.IStmt;
 import model.types.IntType;
 import model.types.StringType;
 import model.values.IntValue;
@@ -16,10 +17,12 @@ import model.values.Value;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-public class ReadFileStatement implements IStmt{
+public class ReadFileStatement implements IStmt {
 
     private final Exp expression;
     private final String varName;
+    private StringType type = new StringType();
+    private IntType type1 = new IntType();
 
     public ReadFileStatement(String varName, Exp expression) {
         this.varName = varName;
@@ -30,6 +33,7 @@ public class ReadFileStatement implements IStmt{
     public PrgState execute(PrgState state) throws MyException, MyException, StatementException, ExpressionException, InterpreterException, FileNotFoundException, ADTException {
 
         final var symbolTable = state.getSymTable();
+        final var heap = state.getHeap();
 
         if(!symbolTable.isDefined(varName)){
             throw new StatementException("Variable '" + varName + "' not defined");
@@ -37,13 +41,13 @@ public class ReadFileStatement implements IStmt{
 
         Value value = symbolTable.lookup(varName);
 
-        if(!value.getType().equals(new IntType())){
+        if(!value.getType().equals(type1)){
             throw new StatementException("ReadFile's value type is not an integer");
         }
 
-        Value valueEval = expression.eval(symbolTable);
+        Value valueEval = expression.eval(symbolTable, heap);
 
-        if(!valueEval.getType().equals(new StringType())){
+        if(!valueEval.getType().equals(type)){
             throw new StatementException("ReadFile's expression value type is not a string");
         }
 
@@ -57,7 +61,7 @@ public class ReadFileStatement implements IStmt{
             String line = state.getFileTable().lookup(sv).readLine();
 
             if(line == null){
-                symbolTable.update(this.varName,new IntType().defaultValue());
+                symbolTable.update(this.varName,type1.defaultValue());
             }else {
                 symbolTable.update(this.varName,new IntValue(Integer.parseInt(line)));
             }

@@ -2,7 +2,9 @@ package model.adt;
 
 import exceptions.ADTException;
 
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class MyDictionary<K, V> implements MyIDictionary<K, V> {
@@ -10,7 +12,7 @@ public class MyDictionary<K, V> implements MyIDictionary<K, V> {
     private Map<K, V> map;
 
     public MyDictionary() {
-        map = new HashMap<K, V>();
+        map = new LinkedHashMap<>();
     }
 
     @Override
@@ -22,6 +24,16 @@ public class MyDictionary<K, V> implements MyIDictionary<K, V> {
             throw new ADTException("The null value cannot be added to the dictionary!");
         }
     }
+
+    public void setMap(Map<K, V> dict) {
+        this.map = dict;
+    }
+
+    @Override
+    public Collection<V> values(){
+        return this.map.values();
+    }
+
 
     @Override
     public void remove(K key) throws ADTException {
@@ -56,10 +68,15 @@ public class MyDictionary<K, V> implements MyIDictionary<K, V> {
     }
 
     @Override
+    public Map<K,V> getMap(){
+        return map;
+    }
+
+    @Override
     public String toString() {
         String result = "{";
         for(K key : this.map.keySet()){
-            result += key.toString() + " = " + this.map.get(key).toString() + ", ";
+            result += key.toString() + " -> " + this.map.get(key).toString() + ", ";
         }
         if(result.length() > 1)
             result = result.substring(0, result.length() - 2);

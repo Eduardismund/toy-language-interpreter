@@ -19,6 +19,7 @@ This project is an interpreter for a custom "toy" language designed for educatio
     - [Statement Evaluation](#statement-evaluation)
     - [Expression Evaluation](#expression-evaluation)
 - [Error Handling](#error-handling)
+- [Garbage Collector](#garbage-collector)
 - [Setup and Usage](#setup-and-usage)
 
 ---
@@ -45,18 +46,19 @@ A program (`Prg`) is defined by a single statement (`Stmt`). Each statement may 
 
 #### Types
 
-The language supports the following basic types:
+The language supports the following types:
 - `int` as `IntType`
 - `bool` as `BoolType`
 - `String` as `StringType`
+- `Reference` as `RefType`
 
 #### Values
 
 Values in this language can be:
-- **Integer (IntValue)**: a numeric constant
+- **Integer (IntValue)**: a `numeric constant`
 - **Boolean (BoolValue)**: `True` or `False`
-- **String (StringValue)**: a string value.
-
+- **String (StringValue)**: a `string` value.
+- **Reference (RefValue)**: consists of a `heap address` and a `Type` of the location having that address 
 
 #### Expressions
 
@@ -66,7 +68,7 @@ Expressions (`Exp`) include:
 - **Arithmetic Expressions**: e.g., `Exp1 + Exp2`, `Exp1 - Exp2`
 - **Logical Expressions**: e.g., `Exp1 and Exp2`, `Exp1 or Exp2`
 - **Relational Expressions**: e.g., `Exp1 < Exp2`,`Exp1 == Exp2`
-
+---
 # Interpreter Architecture
 
 The interpreter operates with three primary structures:
@@ -83,8 +85,14 @@ The **ExeStack** holds statements awaiting execution. Initially, it contains the
 ### File Table (FileTable)
 The **FileTable** tracks the opened files during the program's execution. It is represented as a dictionary mapping a StringValue (filename) to a file descriptor (BufferedReader). Files are accessed by their string identifiers, and the file descriptors are used for reading data.
 
+### Heap Table (Heap)
+The **Heap Table** is a dictionary of
+mappings (address, content) where the address is an integer (the index of a location in the heap)
+while the content is a Value. Heap must manage the unicity of the addresses, therefore it must have
+a field that denotes the new free location. The addresses start from 1. The address 0 is considered an
+invalid address (namely null).
 
-
+---
 Each program execution initializes its own unique `PrgState` containing these structures.
 
 ## Evaluation Rules
@@ -103,13 +111,20 @@ The interpreter processes statements according to predefined rules. Key rules in
 - **Read File Statement:** Reads an integer from the file associated with `exp` and stores it in the variable ``var_name`` in the **SymTable**.
 
 - **Close Read Statement:** Closes the file specified by the evaluated string `exp` and removes the entry from the **FileTable**.
+- **Heap Allocation Statement:** Allocates memory in the heap for the initialized `RefType` variable `var_name` by evaluating the expression `exp`, with the **Heap** managing references as pointers.
+- **Heap Writing Statement:** Updates the heap for the initialized `RefType` variable `var_name` by evaluating the expression `exp`, modifying the **Heap** to reflect the new pointer references.
+- **While Statement:** A **while loop** statement that evaluates an expression `exp`; if the expression is a `BoolValue` and evaluates to true, it pushes the `statement` onto the execution stack for repeated execution
+
+---
 ### Expression Evaluation
 Expressions are recursively evaluated, with type checks for:
 
-- **Arithmetic Operations**: Ensures both operands are `int`.
-- **Logical Operations**: Ensures both operands are `bool`.
-- **Relational Operations**: Evaluates relational expressions and ensures both operands are of compatible types.
+- **Arithmetic Expression**: Ensures both operands are `int`.
+- **Logical Expression**: Ensures both operands are `bool`.
+- **Relational Expression**: Evaluates relational expressions and ensures both operands are of compatible types.
+- **Heap Reading Expression**: Evaluates the expression `exp` and takes the corresponding address from the **Heap Table**.
 
+---
 ### Error Handling
 The interpreter captures errors such as:
 
@@ -118,6 +133,18 @@ The interpreter captures errors such as:
 - **Division by Zero**: Raised when dividing an integer by zero.
 - **File Not Found**: Raised when attempting to open a file that doesn't exist or is not accessible.
 
+---
+### Garbage Collector
+
+A **garbage collector** is a system or process responsible for automatically managing memory by identifying and reclaiming memory that is no longer in use or reachable. The primary goal is to free up memory resources that are not being used, ensuring efficient memory management and preventing memory leaks.
+
+##### How It Works:
+- The garbage collector examines the **symbol table** to find which objects are still being used (reachable). It then identifies the objects in the heap that are no longer referenced and can be safely removed.
+- Any unreferenced objects are collected, and their memory is freed, ensuring that the system does not waste memory on unused objects.
+
+This process ensures that the program does not run out of memory and maintains efficient use of resources over time. The garbage collector often runs periodically in the background or when the system detects that memory is running low.
+
+---
 ## Setup and Usage
 
 ### Prerequisites

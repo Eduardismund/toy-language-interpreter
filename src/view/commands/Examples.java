@@ -1,18 +1,101 @@
 package view.commands;
 
-import model.expressions.ArithExp;
-import model.expressions.LogicExp;
-import model.expressions.ValueExp;
-import model.expressions.VarExp;
+import model.expressions.*;
 import model.statements.*;
+import model.statements.fileStatements.CloseReadFileStmt;
+import model.statements.fileStatements.OpenFileStmt;
+import model.statements.fileStatements.ReadFileStatement;
+import model.statements.heapStatements.HeapAllocationStmt;
+import model.statements.heapStatements.HeapWritingStmt;
 import model.types.BoolType;
 import model.types.IntType;
+import model.types.RefType;
 import model.types.StringType;
 import model.values.BoolValue;
 import model.values.IntValue;
 import model.values.StringValue;
+import model.values.Value;
 
 public class Examples {
+    //Example:  int v; v=4; (while (v>0) print(v);v=v-1);print(v)
+    private static IStmt createExample9(){
+        return new CompStmt(
+                new VarDeclStmt(new IntType(), "v"),
+                new CompStmt(
+                        new AssignStmt("v", new ValueExp(new IntValue(4))),
+                        new CompStmt(
+                                new WhileStmt(new RelExp(">", new VarExp("v"), new ValueExp(new IntValue(0))),
+                                        new CompStmt(
+                                                new PrintStmt(new VarExp("v")),new AssignStmt("v", new ArithExp(new VarExp("v"), new ValueExp(new IntValue(1)), 2)))),
+                                new PrintStmt(new VarExp("v"))
+
+                        )
+                )
+        );
+    }
+
+
+    //Ref int v;new(v,20);print(rH(v)); wH(v,30);print(rH(v)+5);
+    private static IStmt createExample8(){
+        return new CompStmt(
+                new VarDeclStmt(new RefType(new IntType()), "v"),
+                new CompStmt(
+                        new HeapAllocationStmt("v", new ValueExp(new IntValue(20))),
+                        new CompStmt(
+                                new PrintStmt(new HeapReadingExp(new VarExp("v"))),
+                                new CompStmt(
+                                        new HeapWritingStmt("v", new ValueExp(new IntValue(30))),
+                                        new PrintStmt(new ArithExp(new HeapReadingExp(new VarExp("v")), new ValueExp(new IntValue(5)), 1))
+
+                                )
+                        )
+                )
+        );
+    }
+
+
+    //Ref int v;new(v,20);Ref Ref int a; new(a,v);print(rH(v));print(rH(rH(a))+5)
+    private static IStmt createExample7(){
+        return new CompStmt(
+                new VarDeclStmt(new RefType(new IntType()), "v"),
+                new CompStmt(
+                        new HeapAllocationStmt("v", new ValueExp(new IntValue(20))),
+                        new CompStmt(
+                                new VarDeclStmt(new RefType(new RefType( new IntType())), "a"),
+                                new CompStmt(
+                                        new HeapAllocationStmt("a", new VarExp("v")),
+                                        new CompStmt(
+                                                new PrintStmt(new HeapReadingExp(new VarExp("v"))),
+                                                new PrintStmt(new ArithExp(new HeapReadingExp(new HeapReadingExp(new VarExp("a"))), new ValueExp(new IntValue(5)), 1))
+                                                //new NopStmt()
+                                        )
+                                )
+
+                        )
+                )
+        );
+    }
+
+    // Ref int v;new(v,20);Ref Ref int a; new(a,v);print(v);print(a)
+    private static IStmt createExample6(){
+        return new CompStmt(
+                new VarDeclStmt(new RefType(new IntType()), "v"),
+                new CompStmt(
+                        new HeapAllocationStmt("v",new ValueExp(new IntValue(20))),
+                        new CompStmt(
+                                new VarDeclStmt(new RefType(new RefType(new IntType())), "a"),
+                                new CompStmt(
+                                        new HeapAllocationStmt("a",new VarExp("v")),
+                                        new CompStmt(
+                                                new PrintStmt(new VarExp("v")),
+                                                new PrintStmt(new VarExp("a"))
+                                        )
+                                )
+
+                        )
+                )
+        );
+    }
 
     private static IStmt createExample5(){
         return new CompStmt(
@@ -82,6 +165,7 @@ public class Examples {
     }
 
     public static IStmt[] exampleList(){
-        return new IStmt[]{createExample1(), createExample2(), createExample3(),createExample4(), createExample5()};
+        return new IStmt[]{createExample1(), createExample2(), createExample3(),createExample4(), createExample5(),
+                createExample6(), createExample7(), createExample8(), createExample9()};
     }
 }

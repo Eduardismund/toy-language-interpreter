@@ -55,9 +55,13 @@ public class MyStack<T> implements MyIStack<T> {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        for(T t: stack){
-            sb.append(" |").append(t).append("| ").append("\n");
+
+        // Iterate through the stack from top to bottom (reverse order)
+        for (int i = stack.size() - 1; i >= 0; i--) {
+            sb.append("|").append(stack.get(i)).append("|\n");
         }
+
         return sb.toString();
     }
+
 }

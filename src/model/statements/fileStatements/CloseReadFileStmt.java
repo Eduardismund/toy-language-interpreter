@@ -1,4 +1,4 @@
-package model.statements;
+package model.statements.fileStatements;
 
 import exceptions.ADTException;
 import exceptions.ExpressionException;
@@ -7,6 +7,7 @@ import exceptions.StatementException;
 import model.MyException;
 import model.PrgState;
 import model.expressions.Exp;
+import model.statements.IStmt;
 import model.types.StringType;
 import model.values.StringValue;
 import model.values.Value;
@@ -14,7 +15,8 @@ import model.values.Value;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-public class CloseReadFileStmt implements IStmt{
+public class CloseReadFileStmt implements IStmt {
+    private StringType s = new StringType();
 
     private final Exp expression;
 
@@ -26,10 +28,11 @@ public class CloseReadFileStmt implements IStmt{
     public PrgState execute(PrgState state) throws MyException, MyException, StatementException, ExpressionException, InterpreterException, FileNotFoundException, ADTException {
         final var symTable = state.getSymTable();
         final var fileTable = state.getFileTable();
+        final var heap = state.getHeap();
 
-        Value value = expression.eval(symTable);
+        Value value = expression.eval(symTable, heap);
 
-        if (!value.getType().equals(new StringType())) {
+        if (!value.getType().equals(s)) {
             throw new StatementException("CloseFile Expression is not a string");
         }
 

@@ -4,6 +4,7 @@ import exceptions.ADTException;
 import exceptions.ExpressionException;
 import exceptions.InterpreterException;
 import model.MyException;
+import model.adt.MyIHeap;
 import model.types.IntType;
 import model.values.BoolValue;
 import model.values.IntValue;
@@ -26,13 +27,12 @@ public class RelExp implements Exp{
 
 
     @Override
-    public Value eval(MyIDictionary<String, Value> dict) throws MyException, MyException, ExpressionException, InterpreterException, ADTException {
-
-        Value value1 = exp1.eval(dict);
+    public Value eval(MyIDictionary<String, Value> dict, MyIHeap<Integer, Value> heap) throws MyException, MyException, ExpressionException, InterpreterException, ADTException {
+        Value value1 = exp1.eval(dict, heap);
         if(!value1.getType().equals(classType)){
             throw new ExpressionException("The type of the first operand is not an integer!");
         }
-        Value value2 = exp2.eval(dict);
+        Value value2 = exp2.eval(dict,heap);
         if(!value2.getType().equals(classType)){
             throw new ExpressionException("The type of the second operand is not an integer!");
         }

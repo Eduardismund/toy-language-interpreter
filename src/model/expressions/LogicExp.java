@@ -4,6 +4,7 @@ import exceptions.ADTException;
 import exceptions.ExpressionException;
 import exceptions.InterpreterException;
 import model.MyException;
+import model.adt.MyIHeap;
 import model.types.BoolType;
 import model.values.BoolValue;
 import model.values.Value;
@@ -23,9 +24,9 @@ public class LogicExp implements Exp{
 
 
     @Override
-    public Value eval(MyIDictionary<String, Value> dict) throws ExpressionException, InterpreterException, MyException, ADTException {
-        Value v1 = e1.eval(dict);
-        Value v2 = e2.eval(dict);
+    public Value eval(MyIDictionary<String, Value> dict, MyIHeap<Integer, Value> heap) throws MyException, MyException, ExpressionException, InterpreterException, ADTException {
+        Value v1 = e1.eval(dict, heap);
+        Value v2 = e2.eval(dict, heap);
 
         if (!(v1.getType() instanceof BoolType) || !(v2.getType() instanceof BoolType)) {
             throw new ExpressionException("The operands are not of type BoolValue!");

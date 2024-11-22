@@ -1,4 +1,4 @@
-package model.statements;
+package model.statements.fileStatements;
 
 import exceptions.ADTException;
 import exceptions.ExpressionException;
@@ -7,6 +7,7 @@ import exceptions.StatementException;
 import model.MyException;
 import model.PrgState;
 import model.expressions.Exp;
+import model.statements.IStmt;
 import model.types.StringType;
 import model.values.StringValue;
 import model.values.Value;
@@ -15,7 +16,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 
-public class OpenFileStmt implements IStmt{
+public class OpenFileStmt implements IStmt {
 
     private Exp expression;
 
@@ -32,8 +33,9 @@ public class OpenFileStmt implements IStmt{
     public PrgState execute(PrgState state) throws MyException, MyException, StatementException, ExpressionException, InterpreterException, ADTException {
         final var symbolTable = state.getSymTable();
         final var fileTable = state.getFileTable();
+        final var heap = state.getHeap();
 
-        Value value = expression.eval(symbolTable);
+        Value value = expression.eval(symbolTable, heap);
 
         if (!value.getType().equals(new StringType())) {
             throw new StatementException("Expression is not a string");
