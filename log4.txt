@@ -81,3 +81,274 @@ executionStack =
 , originalProgram = (bool b; (int c; (b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2))))
 
 
+------- Current Program State ------
+ID = 1
+executionStack = 
+|bool b|
+|(int c; (b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2)))|
+
+, symbolTable = {}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (bool b; (int c; (b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|(int c; (b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2)))|
+
+, symbolTable = {b -> false}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (bool b; (int c; (b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|int c|
+|(b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2))|
+
+, symbolTable = {b -> false}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (bool b; (int c; (b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|(b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2))|
+
+, symbolTable = {b -> false, c -> 0}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (bool b; (int c; (b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|b = true|
+|if (b && true) then (c = 0 + 4) else (c = 0 + 2)|
+
+, symbolTable = {b -> false, c -> 0}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (bool b; (int c; (b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|if (b && true) then (c = 0 + 4) else (c = 0 + 2)|
+
+, symbolTable = {b -> true, c -> 0}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (bool b; (int c; (b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|c = 0 + 4|
+
+, symbolTable = {b -> true, c -> 0}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (bool b; (int c; (b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+
+, symbolTable = {b -> true, c -> 4}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (bool b; (int c; (b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|bool b|
+|(int c; (b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2)))|
+
+, symbolTable = {}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (bool b; (int c; (b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|(int c; (b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2)))|
+
+, symbolTable = {b -> false}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (bool b; (int c; (b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|int c|
+|(b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2))|
+
+, symbolTable = {b -> false}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (bool b; (int c; (b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|(b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2))|
+
+, symbolTable = {b -> false, c -> 0}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (bool b; (int c; (b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|b = true|
+|if (b && true) then (c = 0 + 4) else (c = 0 + 2)|
+
+, symbolTable = {b -> false, c -> 0}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (bool b; (int c; (b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|if (b && true) then (c = 0 + 4) else (c = 0 + 2)|
+
+, symbolTable = {b -> true, c -> 0}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (bool b; (int c; (b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|c = 0 + 4|
+
+, symbolTable = {b -> true, c -> 0}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (bool b; (int c; (b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+
+, symbolTable = {b -> true, c -> 4}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (bool b; (int c; (b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|bool b|
+|(int c; (b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2)))|
+
+, symbolTable = {}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (bool b; (int c; (b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|(int c; (b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2)))|
+
+, symbolTable = {b -> false}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (bool b; (int c; (b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|int c|
+|(b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2))|
+
+, symbolTable = {b -> false}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (bool b; (int c; (b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|(b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2))|
+
+, symbolTable = {b -> false, c -> 0}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (bool b; (int c; (b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|b = true|
+|if (b && true) then (c = 0 + 4) else (c = 0 + 2)|
+
+, symbolTable = {b -> false, c -> 0}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (bool b; (int c; (b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|if (b && true) then (c = 0 + 4) else (c = 0 + 2)|
+
+, symbolTable = {b -> true, c -> 0}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (bool b; (int c; (b = true; if (b && true) then (c = 0 + 4) else (c = 0 + 2))))
+
+

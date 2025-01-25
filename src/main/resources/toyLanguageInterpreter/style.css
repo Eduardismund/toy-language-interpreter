@@ -1,0 +1,172 @@
+/* General styling for the root element */
+.root {
+    -fx-background-color: #f5f5f5; /* Light gray background for the entire scene */
+    -fx-font-family: "Segoe UI", sans-serif; /* Elegant font */
+}
+
+/* Styling for the HBox with title */
+.hbox-title {
+    -fx-alignment: center;
+    -fx-spacing: 10px;
+    -fx-background-color: #f0f0f0;
+    -fx-padding: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 5, 0.5, 2, 2); /* Subtle shadow effect */
+}
+
+/* Title Label */
+.label-title {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #4a4a4a;
+    -fx-text-alignment: center;
+}
+
+/* Style for the TableView container */
+.table-view {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1px;
+    -fx-font-size: 14px;
+    -fx-padding: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0.5, 2, 2);
+    -fx-background-radius: 5px; /* Rounded corners */
+}
+
+.label-normal {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;  /* Bold text */
+    -fx-text-fill: #2c3e50;  /* Elegant dark blue-gray color */
+    -fx-background-color: transparent;
+    -fx-padding: 6px 10px;  /* Slightly larger padding for spacing */
+    -fx-border-width: 0;  /* No border */
+    -fx-font-family: "Arial", sans-serif;  /* Clean, classic font */
+    -fx-alignment: center-left;  /* Align text to the left */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 3, 0.5, 1, 1); /* Soft shadow for depth */
+}
+
+
+
+
+/* Styling for the TableColumn headers */
+.table-view .column-header-background {
+    -fx-background-color: linear-gradient(to bottom, #dcdcdc, #f4f4f4);
+    -fx-background-radius: 5px;
+}
+
+.table-column {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-text-fill: #4a4a4a;
+}
+
+/* Styling for the rows in the TableView */
+.table-view .table-row-cell {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e0e0e0;
+}
+
+.table-view .table-row-cell:hover {
+    -fx-background-color: #e9f1f8; /* Light blue on hover */
+}
+
+/* Styling for the Label of Table Sections */
+.label-statement {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+    -fx-text-alignment: center;
+    -fx-padding: 10px 0;
+}
+
+/* Styling for the ListView */
+.list-view {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 2px;
+    -fx-font-size: 14px;
+    -fx-padding: 10px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 5, 0.0, 0, 0);
+    -fx-background-radius: 5px;
+}
+
+.list-view:hover {
+    -fx-background-color: #e0f7fa;
+    -fx-cursor: hand;
+}
+
+/* Styling for TextField */
+.text-field {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #888;
+    -fx-border-width: 1px;
+    -fx-padding: 5px;
+    -fx-background-radius: 5px; /* Rounded corners */
+}
+
+/* Hover effect for the TextField */
+.text-field:hover {
+    -fx-background-color: #e3f2fd;
+}
+
+/* Styling for the VBox */
+VBox {
+    -fx-spacing: 20px;
+    -fx-padding: 15px;
+}
+
+/* Styling for Buttons */
+.button {
+    -fx-background-color: #4CAF50; /* Green background */
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 5px; /* Rounded corners */
+    -fx-border-width: 0;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #45a049; /* Darker green on hover */
+}
+
+/* Tooltip styling */
+.tooltip {
+    -fx-background-color: #f5f5f5;
+    -fx-text-fill: #333;
+    -fx-font-size: 12px;
+    -fx-padding: 5px;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 5px;
+}
+
+/* Scroll Pane styling */
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-padding: 10px;
+}
+
+/* Styling for the HBox containing the tables */
+.hbox-table {
+    -fx-spacing: 20px;
+    -fx-padding: 20px;
+    -fx-alignment: center;
+}
+
+/* Additional spacing and padding for sections */
+.vbox-section {
+    -fx-spacing: 15px;
+    -fx-padding: 15px;
+    -fx-background-color: #f9f9f9;
+    -fx-background-radius: 10px;
+}
+
+/* Add subtle animations for interactive elements */
+.list-view, .table-view, .text-field {
+    -fx-opacity: 0.9;
+    -fx-transition: opacity 0.3s ease-in-out;
+}
+
+.list-view:hover, .table-view:hover, .text-field:hover {
+    -fx-opacity: 1;
+}

@@ -134,3 +134,152 @@ executionStack =
 , originalProgram = (Ref(int) v; (new(v, 20); (Ref(Ref(int)) a; (new(a, v); (print(v); print(a))))))
 
 
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|(Ref(int) v; (new(v, 20); (Ref(Ref(int)) a; (new(a, v); (print(v); print(a))))))|
+
+, symbolTable = {}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (Ref(int) v; (new(v, 20); (Ref(Ref(int)) a; (new(a, v); (print(v); print(a))))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|Ref(int) v|
+|(new(v, 20); (Ref(Ref(int)) a; (new(a, v); (print(v); print(a)))))|
+
+, symbolTable = {}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (Ref(int) v; (new(v, 20); (Ref(Ref(int)) a; (new(a, v); (print(v); print(a))))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|(new(v, 20); (Ref(Ref(int)) a; (new(a, v); (print(v); print(a)))))|
+
+, symbolTable = {v -> (0, int)}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (Ref(int) v; (new(v, 20); (Ref(Ref(int)) a; (new(a, v); (print(v); print(a))))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|new(v, 20)|
+|(Ref(Ref(int)) a; (new(a, v); (print(v); print(a))))|
+
+, symbolTable = {v -> (0, int)}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (Ref(int) v; (new(v, 20); (Ref(Ref(int)) a; (new(a, v); (print(v); print(a))))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|(Ref(Ref(int)) a; (new(a, v); (print(v); print(a))))|
+
+, symbolTable = {v -> (1, int)}
+, output = []
+, fileTable = {}
+, heap = {1 -> 20}
+, originalProgram = (Ref(int) v; (new(v, 20); (Ref(Ref(int)) a; (new(a, v); (print(v); print(a))))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|Ref(Ref(int)) a|
+|(new(a, v); (print(v); print(a)))|
+
+, symbolTable = {v -> (1, int)}
+, output = []
+, fileTable = {}
+, heap = {1 -> 20}
+, originalProgram = (Ref(int) v; (new(v, 20); (Ref(Ref(int)) a; (new(a, v); (print(v); print(a))))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|(new(a, v); (print(v); print(a)))|
+
+, symbolTable = {v -> (1, int), a -> (0, Ref(int))}
+, output = []
+, fileTable = {}
+, heap = {1 -> 20}
+, originalProgram = (Ref(int) v; (new(v, 20); (Ref(Ref(int)) a; (new(a, v); (print(v); print(a))))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|new(a, v)|
+|(print(v); print(a))|
+
+, symbolTable = {v -> (1, int), a -> (0, Ref(int))}
+, output = []
+, fileTable = {}
+, heap = {1 -> 20}
+, originalProgram = (Ref(int) v; (new(v, 20); (Ref(Ref(int)) a; (new(a, v); (print(v); print(a))))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|(print(v); print(a))|
+
+, symbolTable = {v -> (1, int), a -> (4, Ref(int))}
+, output = []
+, fileTable = {}
+, heap = {1 -> 20, 4 -> (1, int)}
+, originalProgram = (Ref(int) v; (new(v, 20); (Ref(Ref(int)) a; (new(a, v); (print(v); print(a))))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|print(v)|
+|print(a)|
+
+, symbolTable = {v -> (1, int), a -> (4, Ref(int))}
+, output = []
+, fileTable = {}
+, heap = {1 -> 20, 4 -> (1, int)}
+, originalProgram = (Ref(int) v; (new(v, 20); (Ref(Ref(int)) a; (new(a, v); (print(v); print(a))))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|print(a)|
+
+, symbolTable = {v -> (1, int), a -> (4, Ref(int))}
+, output = [(1, int)]
+, fileTable = {}
+, heap = {1 -> 20, 4 -> (1, int)}
+, originalProgram = (Ref(int) v; (new(v, 20); (Ref(Ref(int)) a; (new(a, v); (print(v); print(a))))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+
+, symbolTable = {v -> (1, int), a -> (4, Ref(int))}
+, output = [(1, int), (4, Ref(int))]
+, fileTable = {}
+, heap = {1 -> 20, 4 -> (1, int)}
+, originalProgram = (Ref(int) v; (new(v, 20); (Ref(Ref(int)) a; (new(a, v); (print(v); print(a))))))
+
+

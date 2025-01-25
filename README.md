@@ -155,18 +155,18 @@ This process ensures that the program does not run out of memory and maintains e
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-repo/toy-language-interpreter.git
+git clone https://github.com/your-repo/toyLanguageInterpreter.git
 ```
 
 Navigate to the repository:
 
 ```bash
-cd toy-language-interpreter
+cd toyLanguageInterpreter
 ```
 Compile and run the interpreter:
 ```bash
 javac -d bin src/*.java
-java -cp bin Main
+java -cp bin main.java.Main
 ```
 
 

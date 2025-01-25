@@ -160,3 +160,116 @@ executionStack = []
 , originalProgram = (string varf; (varf = test.in; (open(varf); (int varc; (readFile(varf,varc); (print(varc); (readFile(varf,varc); (print(varc); closeFile(varf)))))))))
 
 
+------- Current Program State ------
+ID = 1
+executionStack = 
+|string varf|
+|(varf = test.in; (open(varf); (int varc; (readFile(varf,varc); (print(varc); (readFile(varf,varc); (print(varc); closeFile(varf))))))))|
+
+, symbolTable = {}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (string varf; (varf = test.in; (open(varf); (int varc; (readFile(varf,varc); (print(varc); (readFile(varf,varc); (print(varc); closeFile(varf)))))))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|(varf = test.in; (open(varf); (int varc; (readFile(varf,varc); (print(varc); (readFile(varf,varc); (print(varc); closeFile(varf))))))))|
+
+, symbolTable = {varf ->  }
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (string varf; (varf = test.in; (open(varf); (int varc; (readFile(varf,varc); (print(varc); (readFile(varf,varc); (print(varc); closeFile(varf)))))))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|varf = test.in|
+|(open(varf); (int varc; (readFile(varf,varc); (print(varc); (readFile(varf,varc); (print(varc); closeFile(varf)))))))|
+
+, symbolTable = {varf ->  }
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (string varf; (varf = test.in; (open(varf); (int varc; (readFile(varf,varc); (print(varc); (readFile(varf,varc); (print(varc); closeFile(varf)))))))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|(open(varf); (int varc; (readFile(varf,varc); (print(varc); (readFile(varf,varc); (print(varc); closeFile(varf)))))))|
+
+, symbolTable = {varf -> test.in}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (string varf; (varf = test.in; (open(varf); (int varc; (readFile(varf,varc); (print(varc); (readFile(varf,varc); (print(varc); closeFile(varf)))))))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|open(varf)|
+|(int varc; (readFile(varf,varc); (print(varc); (readFile(varf,varc); (print(varc); closeFile(varf))))))|
+
+, symbolTable = {varf -> test.in}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (string varf; (varf = test.in; (open(varf); (int varc; (readFile(varf,varc); (print(varc); (readFile(varf,varc); (print(varc); closeFile(varf)))))))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|(int varc; (readFile(varf,varc); (print(varc); (readFile(varf,varc); (print(varc); closeFile(varf))))))|
+
+, symbolTable = {varf -> test.in}
+, output = []
+, fileTable = {test.in -> java.io.BufferedReader@7d660f5e}
+, heap = {}
+, originalProgram = (string varf; (varf = test.in; (open(varf); (int varc; (readFile(varf,varc); (print(varc); (readFile(varf,varc); (print(varc); closeFile(varf)))))))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|int varc|
+|(readFile(varf,varc); (print(varc); (readFile(varf,varc); (print(varc); closeFile(varf)))))|
+
+, symbolTable = {varf -> test.in}
+, output = []
+, fileTable = {test.in -> java.io.BufferedReader@7d660f5e}
+, heap = {}
+, originalProgram = (string varf; (varf = test.in; (open(varf); (int varc; (readFile(varf,varc); (print(varc); (readFile(varf,varc); (print(varc); closeFile(varf)))))))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|(readFile(varf,varc); (print(varc); (readFile(varf,varc); (print(varc); closeFile(varf)))))|
+
+, symbolTable = {varf -> test.in, varc -> 0}
+, output = []
+, fileTable = {test.in -> java.io.BufferedReader@7d660f5e}
+, heap = {}
+, originalProgram = (string varf; (varf = test.in; (open(varf); (int varc; (readFile(varf,varc); (print(varc); (readFile(varf,varc); (print(varc); closeFile(varf)))))))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|readFile(varf,varc)|
+|(print(varc); (readFile(varf,varc); (print(varc); closeFile(varf))))|
+
+, symbolTable = {varf -> test.in, varc -> 0}
+, output = []
+, fileTable = {test.in -> java.io.BufferedReader@7d660f5e}
+, heap = {}
+, originalProgram = (string varf; (varf = test.in; (open(varf); (int varc; (readFile(varf,varc); (print(varc); (readFile(varf,varc); (print(varc); closeFile(varf)))))))))
+
+

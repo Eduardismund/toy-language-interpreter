@@ -72,3 +72,163 @@ executionStack =
 , originalProgram = (int v; (v = 2; print(v)))
 
 
+------- Current Program State ------
+ID = 1
+executionStack = 
+|int v|
+|(v = 2; print(v))|
+
+, symbolTable = {}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 2; print(v)))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|(v = 2; print(v))|
+
+, symbolTable = {v -> 0}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 2; print(v)))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|v = 2|
+|print(v)|
+
+, symbolTable = {v -> 0}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 2; print(v)))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|print(v)|
+
+, symbolTable = {v -> 2}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 2; print(v)))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+
+, symbolTable = {v -> 2}
+, output = [2]
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 2; print(v)))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|int v|
+|(v = 2; print(v))|
+
+, symbolTable = {}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 2; print(v)))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|(v = 2; print(v))|
+
+, symbolTable = {v -> 0}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 2; print(v)))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|v = 2|
+|print(v)|
+
+, symbolTable = {v -> 0}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 2; print(v)))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|int v|
+|(v = 2; print(v))|
+
+, symbolTable = {}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 2; print(v)))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|(v = 2; print(v))|
+
+, symbolTable = {v -> 0}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 2; print(v)))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|v = 2|
+|print(v)|
+
+, symbolTable = {v -> 0}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 2; print(v)))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|print(v)|
+
+, symbolTable = {v -> 2}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 2; print(v)))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+
+, symbolTable = {v -> 2}
+, output = [2]
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 2; print(v)))
+
+

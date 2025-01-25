@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="toyLanguageInterpreter.JavaFXTableExample">
+
+    <HBox fx:id="hbox" spacing="10" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10"
+          styleClass="hbox-title">
+        <Label fx:id="label" text="Toy Language Interpreter" styleClass="label-title"/>
+    </HBox>
+
+    <HBox spacing="20" AnchorPane.topAnchor="50" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10">
+
+        <VBox spacing="20" AnchorPane.topAnchor="50" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" >
+            <Label text="Select a Program to Execute:" styleClass="label-statement" />
+            <ListView fx:id="programListView" prefHeight="280" prefWidth="700" styleClass="list-view"/>
+        </VBox>
+
+        <VBox spacing="20" AnchorPane.topAnchor="50" AnchorPane.rightAnchor="10" AnchorPane.leftAnchor="10">
+            <Label text="Number of PrgStates" styleClass="label-statement" alignment="CENTER"/>
+            <TextField fx:id="numPrgStatesTextField" editable="false" styleClass="text-field"/>
+        </VBox>
+    </HBox>
+
+
+
+    <!-- Main Info Section -->
+    <VBox spacing="70" AnchorPane.topAnchor="420" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10">
+
+        <VBox spacing="10" AnchorPane.topAnchor="420" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10">
+            <Label text="Heap Table" styleClass="label-statement" alignment="CENTER"/>
+            <TableView fx:id="heapTable" maxHeight="200" maxWidth="200" styleClass="table-view">
+                <columns>
+                    <TableColumn text="Address" maxWidth="100" styleClass="table-column" />
+                    <TableColumn text="Value" maxWidth="100" styleClass="table-column"/>
+                </columns>
+            </TableView>
+        </VBox>
+
+
+        <Label text="Out" />
+        <ListView fx:id="outListView" maxHeight="100" />
+
+        <Label text="File Table" />
+        <ListView fx:id="fileTableListView" prefHeight="100" />
+
+        <Label text="PrgState Identifiers" />
+        <ListView fx:id="prgStateIdListView" prefHeight="100" />
+
+        <Label text="SymTable" />
+        <TableView fx:id="symTable">
+            <columns>
+                <TableColumn text="Variable" />
+                <TableColumn text="Value" />
+            </columns>
+        </TableView>
+
+        <Label text="ExeStack" />
+        <ListView fx:id="exeStackListView" prefHeight="100" />
+    </VBox>
+
+    <!-- Run Button -->
+    <Button text="Run One Step" fx:id="runOneStepButton" AnchorPane.bottomAnchor="10" AnchorPane.leftAnchor="10" />
+</AnchorPane>
