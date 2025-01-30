@@ -1,5 +1,7 @@
 package toyLanguageInterpreter.model.adt;
 
+import toyLanguageInterpreter.exceptions.ADTException;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -42,5 +44,15 @@ public class MyList<T> implements MyIList<T> {
     @Override
     public String toString() {
         return list.toString();
+    }
+
+    public T get(int index) throws ADTException {
+        if (index < 0 || index >= list.size())
+            throw new ADTException("Index out of bounds!");
+        try {
+            return list.get(index);
+        } catch (Exception exception) {
+            throw new ADTException(exception.getMessage());
+        }
     }
 }

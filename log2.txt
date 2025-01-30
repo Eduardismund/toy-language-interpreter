@@ -164,3 +164,114 @@ executionStack =
 , originalProgram = (int a; (int b; (a = 2 + 3 * 5; (b = a + 1; print(b)))))
 
 
+------- Current Program State ------
+ID = 1
+executionStack = 
+|int a|
+|(int b; (a = 2 + 3 * 5; (b = a + 1; print(b))))|
+
+, symbolTable = {}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (int a; (int b; (a = 2 + 3 * 5; (b = a + 1; print(b)))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|(int b; (a = 2 + 3 * 5; (b = a + 1; print(b))))|
+
+, symbolTable = {a -> 0}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (int a; (int b; (a = 2 + 3 * 5; (b = a + 1; print(b)))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|int b|
+|(a = 2 + 3 * 5; (b = a + 1; print(b)))|
+
+, symbolTable = {a -> 0}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (int a; (int b; (a = 2 + 3 * 5; (b = a + 1; print(b)))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|(a = 2 + 3 * 5; (b = a + 1; print(b)))|
+
+, symbolTable = {a -> 0, b -> 0}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (int a; (int b; (a = 2 + 3 * 5; (b = a + 1; print(b)))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|a = 2 + 3 * 5|
+|(b = a + 1; print(b))|
+
+, symbolTable = {a -> 0, b -> 0}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (int a; (int b; (a = 2 + 3 * 5; (b = a + 1; print(b)))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|(b = a + 1; print(b))|
+
+, symbolTable = {a -> 17, b -> 0}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (int a; (int b; (a = 2 + 3 * 5; (b = a + 1; print(b)))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|b = a + 1|
+|print(b)|
+
+, symbolTable = {a -> 17, b -> 0}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (int a; (int b; (a = 2 + 3 * 5; (b = a + 1; print(b)))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|print(b)|
+
+, symbolTable = {a -> 17, b -> 18}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (int a; (int b; (a = 2 + 3 * 5; (b = a + 1; print(b)))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+
+, symbolTable = {a -> 17, b -> 18}
+, output = [18]
+, fileTable = {}
+, heap = {}
+, originalProgram = (int a; (int b; (a = 2 + 3 * 5; (b = a + 1; print(b)))))
+
+

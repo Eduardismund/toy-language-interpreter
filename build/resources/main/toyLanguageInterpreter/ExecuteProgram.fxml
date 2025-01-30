@@ -82,6 +82,16 @@
                                     </TableView>
                                 </VBox>
 
+                                <VBox spacing="10" HBox.hgrow="ALWAYS">
+                                    <Label text="CountDownLatch Table:" alignment="CENTER" styleClass="label-normal"/>
+                                    <TableView fx:id="latchTable"  styleClass="table-view">
+                                        <columns>
+                                            <TableColumn fx:id="column1Latch" text="Integer1" />
+                                            <TableColumn fx:id="column2Latch" text="Integer2" />
+                                        </columns>
+                                    </TableView>
+                                </VBox>
+
                                 <!-- Heap Table -->
                                 <VBox spacing="10" HBox.hgrow="ALWAYS">
                                     <Label text="Heap Table:" alignment="CENTER" styleClass="label-normal"/>

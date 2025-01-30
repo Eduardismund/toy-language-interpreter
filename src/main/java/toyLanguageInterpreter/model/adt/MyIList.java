@@ -1,5 +1,7 @@
 package toyLanguageInterpreter.model.adt;
 
+import toyLanguageInterpreter.exceptions.ADTException;
+
 import java.util.Iterator;
 import java.util.List;
 
@@ -10,4 +12,5 @@ public interface MyIList<T> {
     void add(T item);
     List<T> getList();
     String toString();
+    <T> T get(int index) throws ADTException;
 }

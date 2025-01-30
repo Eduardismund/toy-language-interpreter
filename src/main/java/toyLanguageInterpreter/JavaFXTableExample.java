@@ -51,7 +51,16 @@ public class JavaFXTableExample {
     private TableColumn<Map.Entry<Integer, Value>, String> valueColumnHeapTable;
 
     @FXML
+    private TableColumn<Map.Entry<Integer, Integer>, String> column1Latch;
+
+    @FXML
+    private TableColumn<Map.Entry<Integer, Integer>, String> column2Latch;
+
+    @FXML
     private TableView<Map.Entry<String, Value>> symbolTable;
+
+    @FXML
+    private TableView<Map.Entry<Integer, Integer>> latchTable;
 
     @FXML
     private TableColumn<Map.Entry<String, Value>, String> symbolColumnSymbolTable;
@@ -67,7 +76,7 @@ public class JavaFXTableExample {
 
     @FXML
     private Button runOneStepButton;
-    
+
     @FXML
     public void initialize() {
 
@@ -103,10 +112,13 @@ public class JavaFXTableExample {
         this.symbolColumnSymbolTable.setCellValueFactory(param -> new SimpleStringProperty(param.getValue().getKey()));
         this.valueColumnSymbolTable.setCellValueFactory(param -> new SimpleStringProperty(param.getValue().getValue().toString()));
 
+        this.column1Latch.setCellValueFactory(param -> new SimpleStringProperty(param.getValue().getKey().toString()));
+        this.column2Latch.setCellValueFactory(param -> new SimpleStringProperty(param.getValue().getValue().toString()));
+
     }
 
     void setStatement(IStmt newStatement, String logPath){
-        PrgState prgState = new PrgState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), newStatement,
+        PrgState prgState = new PrgState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), newStatement, new MyLatchTable(),
                 new MyDictionary<>(), new MyHeap<>());
 
         try{
@@ -183,6 +195,15 @@ public class JavaFXTableExample {
         }
     }
 
+    public void populateLatchTable(PrgState state){
+        if(state == null){
+            this.latchTable.getItems().setAll(FXCollections.observableArrayList());
+        }
+        else{
+            this.latchTable.getItems().setAll(FXCollections.observableArrayList(state.getLatchTable().getContent().entrySet()));
+        }
+    }
+
     private void populateOutput(){
         if(!this.controller.getPrgList().isEmpty()){
             this.output.getItems().setAll(FXCollections.observableArrayList(this.controller.getOutput().getList()));
@@ -204,11 +225,12 @@ public class JavaFXTableExample {
     private void changeThreadState(PrgState prgState){
         this.populateSymbolTable(prgState);
         this.populateExecutionStack(prgState);
+        this.populateLatchTable(prgState);
     }
 
     private Controller setControllerForProgram(int selectedProgramId) throws RepoException {
         IStmt example = Examples.exampleList()[selectedProgramId];
-        PrgState prgState = new PrgState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), example, new MyDictionary<>(), new MyHeap<>() );
+        PrgState prgState = new PrgState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), example, new MyLatchTable(), new MyDictionary<>(), new MyHeap<>() );
         IRepository repo = new Repository("log" + (selectedProgramId + 1) + ".txt");
         repo.add(prgState);
         return new Controller(repo);

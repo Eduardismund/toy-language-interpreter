@@ -6,6 +6,8 @@ import java.util.Collection;
 import java.util.Map;
 
 public interface MyIDictionary<K, V> {
+
+
     void put(K key, V value) throws ADTException;
 
     void remove(K key) throws ADTException;
@@ -23,4 +25,5 @@ public interface MyIDictionary<K, V> {
     Collection<V> values();
 
     MyIDictionary<K, V> deepCopy() throws ADTException;
+    MyDictionary<K, V> shallowCopy();
 }

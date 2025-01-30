@@ -32,7 +32,6 @@ public class HeapReadingExp implements Exp{
         if(!heap.isDefined(address)){
             throw new ExpressionException("The Address does not exist in the heap");
         }
-        System.out.println(heap.lookup(address));
         return heap.lookup(address);
     }
 

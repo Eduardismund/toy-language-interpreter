@@ -139,7 +139,7 @@ public class Controller {
                 .filter(programState -> programState.getExeStack().isEmpty())
                 .forEach(programState -> {
                     try{
-                        System.out.println(programState.toString());
+                        //System.out.println(programState.toString());
                     } catch (Exception e) {
                         System.out.println(e.getMessage());
                     }
@@ -165,7 +165,7 @@ public class Controller {
     }
 
     public void typeCheck() throws InterpreterException, StatementException, ADTException, ExpressionException {
-        repo.typeCheck();
+        //repo.typeCheck();
     }
 
     // <editor-fold desc="Get Runtime States">

@@ -19,6 +19,7 @@ public class PrgState {
     private MyIDictionary<String, Value> symTable;
     private MyIList<Value> out;
     private IStmt originalProgram;
+    private MyILatchTable latchTable;
     private MyIDictionary<StringValue, BufferedReader> fileTable;
     private MyIHeap<Integer,Value> heap;
     private int id;
@@ -39,11 +40,12 @@ public class PrgState {
     }
 
     public PrgState(MyIStack<IStmt> exeStack, MyIDictionary<String, Value> symTable, MyIList<Value> out,
-                    IStmt originalProgram, MyIDictionary<StringValue, BufferedReader> fileTable, MyIHeap<Integer,Value> heap) {
+                    IStmt originalProgram, MyILatchTable latchTable, MyIDictionary<StringValue, BufferedReader> fileTable, MyIHeap<Integer,Value> heap) {
         this.exeStack = exeStack;
         this.symTable = symTable;
         this.out = out;
         this.originalProgram = originalProgram.deepCopy();
+        this.latchTable = latchTable;
         this.exeStack.push(originalProgram);
         this.fileTable = fileTable;
         this.heap = heap;
@@ -64,6 +66,10 @@ public class PrgState {
 
     public MyIDictionary<String, Value> getSymTable() {
         return symTable;
+    }
+
+    public MyILatchTable getLatchTable() {
+        return latchTable;
     }
 
     public MyIList<Value> getOut() {
@@ -108,6 +114,7 @@ public class PrgState {
         result += ", output = " + out + "\n";
         result += ", fileTable = " + fileTable + "\n";
         result += ", heap = " + heap.toString() + "\n";
+        result += ", countDown latch = " + latchTable.toString() + "\n";
         result += ", originalProgram = " + originalProgram + "\n\n";
         return result;
     }
@@ -129,6 +136,9 @@ public class PrgState {
     }
     public void setSymbolTable(MyIDictionary<String, Value> symTable) {
         this.symTable = symTable;
+    }
+    public void setLatchTable(MyILatchTable latchTable) {
+        this.latchTable = latchTable;
     }
 
     public void setFileTable(MyIDictionary<StringValue, BufferedReader> fileTable) {

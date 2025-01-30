@@ -11,6 +11,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ListView;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import toyLanguageInterpreter.exceptions.ADTException;
 import toyLanguageInterpreter.model.adt.MyDictionary;
 import toyLanguageInterpreter.model.statements.IStmt;
 import toyLanguageInterpreter.view.commands.Examples;

@@ -6,10 +6,11 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class MyDictionary<K, V> implements MyIDictionary<K, V> {
 
-    private Map<K, V> map;
+    Map<K, V> map;
 
     public MyDictionary() {
         map = new LinkedHashMap<>();
@@ -91,5 +92,13 @@ public class MyDictionary<K, V> implements MyIDictionary<K, V> {
             result.put(key,map.get(key));
         }
         return result;
+    }
+
+    @Override
+    public MyDictionary<K, V> shallowCopy() {
+        Map<K, V> dictionaryContent = this.getMap();
+        MyDictionary<K, V> newDictionary = new MyDictionary<>();
+        newDictionary.setMap(dictionaryContent.entrySet().stream().collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue)));
+        return newDictionary;
     }
 }

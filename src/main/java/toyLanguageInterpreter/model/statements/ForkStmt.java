@@ -29,7 +29,7 @@ public class ForkStmt implements IStmt {
         final var newExeStack = new MyStack<IStmt>();
 
         final var newSymTable = state.getSymTable().deepCopy();
-        return new PrgState(newExeStack, newSymTable, state.getOut(), forkStmt, state.getFileTable(), state.getHeap());
+        return new PrgState(newExeStack, newSymTable, state.getOut(), forkStmt, state.getLatchTable(), state.getFileTable(), state.getHeap());
     }
 
     @Override

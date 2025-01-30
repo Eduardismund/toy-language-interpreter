@@ -1,0 +1,313 @@
+------- Current Program State ------
+ID = 1
+executionStack = 
+|Ref(int) a|
+|(Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v))))))))))|
+
+, symbolTable = {}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|(Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v))))))))))|
+
+, symbolTable = {a -> (0, int)}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|Ref(int) b|
+|(int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))|
+
+, symbolTable = {a -> (0, int)}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|(int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))|
+
+, symbolTable = {a -> (0, int), b -> (0, int)}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|int v|
+|(new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v))))))))|
+
+, symbolTable = {a -> (0, int), b -> (0, int)}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|(new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v))))))))|
+
+, symbolTable = {a -> (0, int), b -> (0, int), v -> 0}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|new(a, 0)|
+|(new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))|
+
+, symbolTable = {a -> (0, int), b -> (0, int), v -> 0}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|(new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))|
+
+, symbolTable = {a -> (1, int), b -> (0, int), v -> 0}
+, output = []
+, fileTable = {}
+, heap = {1 -> 0}
+, originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|new(b, 0)|
+|(writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v))))))|
+
+, symbolTable = {a -> (1, int), b -> (0, int), v -> 0}
+, output = []
+, fileTable = {}
+, heap = {1 -> 0}
+, originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|(writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v))))))|
+
+, symbolTable = {a -> (1, int), b -> (4, int), v -> 0}
+, output = []
+, fileTable = {}
+, heap = {1 -> 0, 4 -> 0}
+, originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|writeHeap(a, 1)|
+|(writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))|
+
+, symbolTable = {a -> (1, int), b -> (4, int), v -> 0}
+, output = []
+, fileTable = {}
+, heap = {1 -> 0, 4 -> 0}
+, originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|(writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))|
+
+, symbolTable = {a -> (1, int), b -> (4, int), v -> 0}
+, output = []
+, fileTable = {}
+, heap = {1 -> 1, 4 -> 0}
+, originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|writeHeap(b, 2)|
+|(v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v))))|
+
+, symbolTable = {a -> (1, int), b -> (4, int), v -> 0}
+, output = []
+, fileTable = {}
+, heap = {1 -> 1, 4 -> 0}
+, originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|(v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v))))|
+
+, symbolTable = {a -> (1, int), b -> (4, int), v -> 0}
+, output = []
+, fileTable = {}
+, heap = {1 -> 1, 4 -> 2}
+, originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|v = rh(a) < rh(b) ? 100 : 200|
+|(print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))|
+
+, symbolTable = {a -> (1, int), b -> (4, int), v -> 0}
+, output = []
+, fileTable = {}
+, heap = {1 -> 1, 4 -> 2}
+, originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|if (rh(a) < rh(b)) then (v = 100) else (v = 200)|
+|(print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))|
+
+, symbolTable = {a -> (1, int), b -> (4, int), v -> 0}
+, output = []
+, fileTable = {}
+, heap = {1 -> 1, 4 -> 2}
+, originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|v = 100|
+|(print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))|
+
+, symbolTable = {a -> (1, int), b -> (4, int), v -> 0}
+, output = []
+, fileTable = {}
+, heap = {1 -> 1, 4 -> 2}
+, originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|(print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))|
+
+, symbolTable = {a -> (1, int), b -> (4, int), v -> 100}
+, output = []
+, fileTable = {}
+, heap = {1 -> 1, 4 -> 2}
+, originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|print(v)|
+|(v = rh(b) - 2 > rh(a) ? 100 : 200; print(v))|
+
+, symbolTable = {a -> (1, int), b -> (4, int), v -> 100}
+, output = []
+, fileTable = {}
+, heap = {1 -> 1, 4 -> 2}
+, originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|(v = rh(b) - 2 > rh(a) ? 100 : 200; print(v))|
+
+, symbolTable = {a -> (1, int), b -> (4, int), v -> 100}
+, output = [100]
+, fileTable = {}
+, heap = {1 -> 1, 4 -> 2}
+, originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|v = rh(b) - 2 > rh(a) ? 100 : 200|
+|print(v)|
+
+, symbolTable = {a -> (1, int), b -> (4, int), v -> 100}
+, output = [100]
+, fileTable = {}
+, heap = {1 -> 1, 4 -> 2}
+, originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|if (rh(b) - 2 > rh(a)) then (v = 100) else (v = 200)|
+|print(v)|
+
+, symbolTable = {a -> (1, int), b -> (4, int), v -> 100}
+, output = [100]
+, fileTable = {}
+, heap = {1 -> 1, 4 -> 2}
+, originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|v = 200|
+|print(v)|
+
+, symbolTable = {a -> (1, int), b -> (4, int), v -> 100}
+, output = [100]
+, fileTable = {}
+, heap = {1 -> 1, 4 -> 2}
+, originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|print(v)|
+
+, symbolTable = {a -> (1, int), b -> (4, int), v -> 200}
+, output = [100]
+, fileTable = {}
+, heap = {1 -> 1, 4 -> 2}
+, originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+
+, symbolTable = {a -> (1, int), b -> (4, int), v -> 200}
+, output = [100, 200]
+, fileTable = {}
+, heap = {1 -> 1, 4 -> 2}
+, originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
+
+

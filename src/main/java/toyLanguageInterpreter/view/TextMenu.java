@@ -47,8 +47,8 @@ public class TextMenu {
 
             }
             Command c = commands.get(line);
-            System.out.println(line);
-            System.out.println(c.getDescription());
+//            System.out.println(line);
+//            System.out.println(c.getDescription());
             if(c == null) {
                 System.out.println("Invalid option");
                 continue;

@@ -1,0 +1,486 @@
+------- Current Program State ------
+ID = 1
+executionStack = 
+|int v|
+|(v = 20; (Wait(10); print(10 * v)))|
+
+, symbolTable = {}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 20; (Wait(10); print(10 * v))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|(v = 20; (Wait(10); print(10 * v)))|
+
+, symbolTable = {v -> 0}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 20; (Wait(10); print(10 * v))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|v = 20|
+|(Wait(10); print(10 * v))|
+
+, symbolTable = {v -> 0}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 20; (Wait(10); print(10 * v))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|(Wait(10); print(10 * v))|
+
+, symbolTable = {v -> 20}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 20; (Wait(10); print(10 * v))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|Wait(10)|
+|print(10 * v)|
+
+, symbolTable = {v -> 20}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 20; (Wait(10); print(10 * v))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|(print(10); Wait(9))|
+|print(10 * v)|
+
+, symbolTable = {v -> 20}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 20; (Wait(10); print(10 * v))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|print(10)|
+|Wait(9)|
+|print(10 * v)|
+
+, symbolTable = {v -> 20}
+, output = []
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 20; (Wait(10); print(10 * v))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|Wait(9)|
+|print(10 * v)|
+
+, symbolTable = {v -> 20}
+, output = [10]
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 20; (Wait(10); print(10 * v))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|(print(9); Wait(8))|
+|print(10 * v)|
+
+, symbolTable = {v -> 20}
+, output = [10]
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 20; (Wait(10); print(10 * v))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|print(9)|
+|Wait(8)|
+|print(10 * v)|
+
+, symbolTable = {v -> 20}
+, output = [10]
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 20; (Wait(10); print(10 * v))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|Wait(8)|
+|print(10 * v)|
+
+, symbolTable = {v -> 20}
+, output = [10, 9]
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 20; (Wait(10); print(10 * v))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|(print(8); Wait(7))|
+|print(10 * v)|
+
+, symbolTable = {v -> 20}
+, output = [10, 9]
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 20; (Wait(10); print(10 * v))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|print(8)|
+|Wait(7)|
+|print(10 * v)|
+
+, symbolTable = {v -> 20}
+, output = [10, 9]
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 20; (Wait(10); print(10 * v))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|Wait(7)|
+|print(10 * v)|
+
+, symbolTable = {v -> 20}
+, output = [10, 9, 8]
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 20; (Wait(10); print(10 * v))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|(print(7); Wait(6))|
+|print(10 * v)|
+
+, symbolTable = {v -> 20}
+, output = [10, 9, 8]
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 20; (Wait(10); print(10 * v))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|print(7)|
+|Wait(6)|
+|print(10 * v)|
+
+, symbolTable = {v -> 20}
+, output = [10, 9, 8]
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 20; (Wait(10); print(10 * v))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|Wait(6)|
+|print(10 * v)|
+
+, symbolTable = {v -> 20}
+, output = [10, 9, 8, 7]
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 20; (Wait(10); print(10 * v))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|(print(6); Wait(5))|
+|print(10 * v)|
+
+, symbolTable = {v -> 20}
+, output = [10, 9, 8, 7]
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 20; (Wait(10); print(10 * v))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|print(6)|
+|Wait(5)|
+|print(10 * v)|
+
+, symbolTable = {v -> 20}
+, output = [10, 9, 8, 7]
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 20; (Wait(10); print(10 * v))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|Wait(5)|
+|print(10 * v)|
+
+, symbolTable = {v -> 20}
+, output = [10, 9, 8, 7, 6]
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 20; (Wait(10); print(10 * v))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|(print(5); Wait(4))|
+|print(10 * v)|
+
+, symbolTable = {v -> 20}
+, output = [10, 9, 8, 7, 6]
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 20; (Wait(10); print(10 * v))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|print(5)|
+|Wait(4)|
+|print(10 * v)|
+
+, symbolTable = {v -> 20}
+, output = [10, 9, 8, 7, 6]
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 20; (Wait(10); print(10 * v))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|Wait(4)|
+|print(10 * v)|
+
+, symbolTable = {v -> 20}
+, output = [10, 9, 8, 7, 6, 5]
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 20; (Wait(10); print(10 * v))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|(print(4); Wait(3))|
+|print(10 * v)|
+
+, symbolTable = {v -> 20}
+, output = [10, 9, 8, 7, 6, 5]
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 20; (Wait(10); print(10 * v))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|print(4)|
+|Wait(3)|
+|print(10 * v)|
+
+, symbolTable = {v -> 20}
+, output = [10, 9, 8, 7, 6, 5]
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 20; (Wait(10); print(10 * v))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|Wait(3)|
+|print(10 * v)|
+
+, symbolTable = {v -> 20}
+, output = [10, 9, 8, 7, 6, 5, 4]
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 20; (Wait(10); print(10 * v))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|(print(3); Wait(2))|
+|print(10 * v)|
+
+, symbolTable = {v -> 20}
+, output = [10, 9, 8, 7, 6, 5, 4]
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 20; (Wait(10); print(10 * v))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|print(3)|
+|Wait(2)|
+|print(10 * v)|
+
+, symbolTable = {v -> 20}
+, output = [10, 9, 8, 7, 6, 5, 4]
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 20; (Wait(10); print(10 * v))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|Wait(2)|
+|print(10 * v)|
+
+, symbolTable = {v -> 20}
+, output = [10, 9, 8, 7, 6, 5, 4, 3]
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 20; (Wait(10); print(10 * v))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|(print(2); Wait(1))|
+|print(10 * v)|
+
+, symbolTable = {v -> 20}
+, output = [10, 9, 8, 7, 6, 5, 4, 3]
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 20; (Wait(10); print(10 * v))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|print(2)|
+|Wait(1)|
+|print(10 * v)|
+
+, symbolTable = {v -> 20}
+, output = [10, 9, 8, 7, 6, 5, 4, 3]
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 20; (Wait(10); print(10 * v))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|Wait(1)|
+|print(10 * v)|
+
+, symbolTable = {v -> 20}
+, output = [10, 9, 8, 7, 6, 5, 4, 3, 2]
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 20; (Wait(10); print(10 * v))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|(print(1); Wait(0))|
+|print(10 * v)|
+
+, symbolTable = {v -> 20}
+, output = [10, 9, 8, 7, 6, 5, 4, 3, 2]
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 20; (Wait(10); print(10 * v))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|print(1)|
+|Wait(0)|
+|print(10 * v)|
+
+, symbolTable = {v -> 20}
+, output = [10, 9, 8, 7, 6, 5, 4, 3, 2]
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 20; (Wait(10); print(10 * v))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|Wait(0)|
+|print(10 * v)|
+
+, symbolTable = {v -> 20}
+, output = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 20; (Wait(10); print(10 * v))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+|print(10 * v)|
+
+, symbolTable = {v -> 20}
+, output = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 20; (Wait(10); print(10 * v))))
+
+
+------- Current Program State ------
+ID = 1
+executionStack = 
+
+, symbolTable = {v -> 20}
+, output = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 200]
+, fileTable = {}
+, heap = {}
+, originalProgram = (int v; (v = 20; (Wait(10); print(10 * v))))
+
+
