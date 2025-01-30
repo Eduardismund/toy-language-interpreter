@@ -2,10 +2,10 @@
 //
 //import toyLanguageInterpreter.exceptions.*;
 //import toyLanguageInterpreter.model.PrgState;
-//import toyLanguageInterpreter.model.adt.MyDictionary;
-//import toyLanguageInterpreter.model.adt.MyIDictionary;
-//import toyLanguageInterpreter.model.adt.MyIList;
-//import toyLanguageInterpreter.model.adt.MyList;
+//import toyLanguageInterpreter.model.adt.dictionary.MyDictionary;
+//import toyLanguageInterpreter.model.adt.dictionary.MyIDictionary;
+//import toyLanguageInterpreter.model.adt.list.MyIList;
+//import toyLanguageInterpreter.model.adt.list.MyList;
 //import toyLanguageInterpreter.model.expressions.Exp;
 //import toyLanguageInterpreter.model.statements.IStmt;
 //import toyLanguageInterpreter.model.types.Type;

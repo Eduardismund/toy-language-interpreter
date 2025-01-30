@@ -5,10 +5,9 @@ import toyLanguageInterpreter.Repository.RepoException;
 import toyLanguageInterpreter.exceptions.*;
 import toyLanguageInterpreter.exceptions.MyException;
 import toyLanguageInterpreter.model.PrgState;
-import toyLanguageInterpreter.model.adt.MyDictionary;
-import toyLanguageInterpreter.model.adt.MyIDictionary;
-import toyLanguageInterpreter.model.adt.MyIHeap;
-import toyLanguageInterpreter.model.adt.MyIList;
+import toyLanguageInterpreter.model.adt.dictionary.MyIDictionary;
+import toyLanguageInterpreter.model.adt.heapTable.MyIHeap;
+import toyLanguageInterpreter.model.adt.list.MyIList;
 import toyLanguageInterpreter.model.values.RefValue;
 import toyLanguageInterpreter.model.values.StringValue;
 import toyLanguageInterpreter.model.values.Value;
@@ -165,7 +164,7 @@ public class Controller {
     }
 
     public void typeCheck() throws InterpreterException, StatementException, ADTException, ExpressionException {
-        //repo.typeCheck();
+        repo.typeCheck();
     }
 
     // <editor-fold desc="Get Runtime States">

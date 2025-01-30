@@ -11,8 +11,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ListView;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-import toyLanguageInterpreter.exceptions.ADTException;
-import toyLanguageInterpreter.model.adt.MyDictionary;
+import toyLanguageInterpreter.model.adt.dictionary.MyDictionary;
 import toyLanguageInterpreter.model.statements.IStmt;
 import toyLanguageInterpreter.view.commands.Examples;
 
@@ -23,13 +22,13 @@ public class ChooseProgramToExecuteController {
     @FXML
     private ListView<IStmt> programsList;
 
-    private JavaFXTableExample executeProgramController;
+    private InterpreterGUIController executeProgramController;
 
     @FXML
     public void initialize() {
         programsList.setItems(this.getStatements());
 
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("ExecuteProgram.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(ChooseProgram.class.getResource("ExecuteProgram.fxml"));
         Stage stage = new Stage();
         try {
             Scene scene = new Scene(fxmlLoader.load(), 1000, 600);

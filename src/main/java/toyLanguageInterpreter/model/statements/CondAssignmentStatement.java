@@ -4,16 +4,10 @@ import toyLanguageInterpreter.exceptions.ADTException;
 import toyLanguageInterpreter.exceptions.ExpressionException;
 import toyLanguageInterpreter.exceptions.StatementException;
 import toyLanguageInterpreter.model.PrgState;
-import toyLanguageInterpreter.model.adt.MyIDictionary;
+import toyLanguageInterpreter.model.adt.dictionary.MyIDictionary;
 import toyLanguageInterpreter.model.expressions.*;
-import toyLanguageInterpreter.model.statements.*;
-import toyLanguageInterpreter.model.statements.heapStatements.HeapAllocationStmt;
-import toyLanguageInterpreter.model.statements.heapStatements.HeapWritingStmt;
 import toyLanguageInterpreter.model.types.BoolType;
-import toyLanguageInterpreter.model.types.IntType;
-import toyLanguageInterpreter.model.types.RefType;
 import toyLanguageInterpreter.model.types.Type;
-import toyLanguageInterpreter.model.values.IntValue;
 
 public class CondAssignmentStatement implements IStmt {
     private String varName;

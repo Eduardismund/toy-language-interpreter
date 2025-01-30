@@ -5,7 +5,7 @@ import toyLanguageInterpreter.exceptions.ExpressionException;
 import toyLanguageInterpreter.exceptions.StatementException;
 import toyLanguageInterpreter.exceptions.MyException;
 import toyLanguageInterpreter.model.PrgState;
-import toyLanguageInterpreter.model.adt.MyIDictionary;
+import toyLanguageInterpreter.model.adt.dictionary.MyIDictionary;
 import toyLanguageInterpreter.model.types.Type;
 
 public class NopStmt implements IStmt{

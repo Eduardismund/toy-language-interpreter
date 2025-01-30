@@ -3,8 +3,8 @@
 //
 //import toyLanguageInterpreter.exceptions.ADTException;
 //import toyLanguageInterpreter.exceptions.InterpreterException;
-//import toyLanguageInterpreter.model.adt.MyIDictionary;
-//import toyLanguageInterpreter.model.adt.MyStack;
+//import toyLanguageInterpreter.model.adt.dictionary.MyIDictionary;
+//import toyLanguageInterpreter.model.adt.stack.MyStack;
 //import toyLanguageInterpreter.model.values.Value;
 //
 //public class MySymbolTablesStack extends MyStack<MyIDictionary<String, Value>> {

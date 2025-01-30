@@ -22,15 +22,6 @@ public class RunCommand extends Command{
         } catch (Exception exception){
             System.out.println(exception.getMessage());
         }
-//
-//        try{
-//            controller.resetProgramStates();
-//        } catch (MyException | RepoException e) {
-//            System.out.println(e.getMessage());
-//        }
     }
 
-    public void resetProgramStates() throws MyException, RepoException {
-        controller.resetProgramStates();
-    }
 }

@@ -7,15 +7,14 @@ package toyLanguageInterpreter.view.commands;
 
 
 
-import javafx.util.Pair;
-import statement.ConditionalAssignment;
-import statement.ForStatement;
-import statement.WaitStatement;
 import toyLanguageInterpreter.model.expressions.*;
 import toyLanguageInterpreter.model.statements.*;
-import toyLanguageInterpreter.model.statements.CountDownLatchStatements.AwaitStatement;
-import toyLanguageInterpreter.model.statements.CountDownLatchStatements.CountdownStatement;
-import toyLanguageInterpreter.model.statements.CountDownLatchStatements.NewLatchStatement;
+import toyLanguageInterpreter.model.statements.countDownLatchStatements.AwaitStatement;
+import toyLanguageInterpreter.model.statements.countDownLatchStatements.CountdownStatement;
+import toyLanguageInterpreter.model.statements.countDownLatchStatements.NewLatchStatement;
+import toyLanguageInterpreter.model.statements.countSemaphoreStatements.AcquireStatement;
+import toyLanguageInterpreter.model.statements.countSemaphoreStatements.CreateSemaphoreStmt;
+import toyLanguageInterpreter.model.statements.countSemaphoreStatements.ReleaseStatement;
 import toyLanguageInterpreter.model.statements.fileStatements.CloseReadFileStmt;
 import toyLanguageInterpreter.model.statements.fileStatements.OpenFileStmt;
 import toyLanguageInterpreter.model.statements.fileStatements.ReadFileStatement;
@@ -28,9 +27,6 @@ import toyLanguageInterpreter.model.types.StringType;
 import toyLanguageInterpreter.model.values.BoolValue;
 import toyLanguageInterpreter.model.values.IntValue;
 import toyLanguageInterpreter.model.values.StringValue;
-import toyLanguageInterpreter.model.values.Value;
-
-import java.util.Arrays;
 
 
 public class Examples {
@@ -316,6 +312,81 @@ public class Examples {
         );
     }
 
+
+public static IStmt createExample14() {
+    IStmt declV1 = new VarDeclStmt(new RefType(new IntType()), "v1");
+    IStmt declCnt = new VarDeclStmt(new IntType(), "cnt");
+    IStmt newV1 = new HeapAllocationStmt("v1", new ValueExp(new IntValue(1)));
+    IStmt createSemaphore = new CreateSemaphoreStmt("cnt", new HeapReadingExp(new VarExp("v1")));
+
+    // First Fork - Thread 1
+    IStmt acquireCnt1 = new AcquireStatement("cnt");
+    IStmt writeV1_1 = new HeapWritingStmt("v1", new ArithExp(new HeapReadingExp(new VarExp("v1")), new ValueExp(new IntValue(10)), 3));
+    IStmt printV1_1 = new PrintStmt(new HeapReadingExp(new VarExp("v1")));
+    IStmt releaseCnt1 = new ReleaseStatement("cnt");
+
+    // Second Fork - Thread 2
+    IStmt acquireCnt2 = new AcquireStatement("cnt");
+    IStmt writeV1_2 = new HeapWritingStmt("v1", new ArithExp(new HeapReadingExp(new VarExp("v1")), new ValueExp(new IntValue(2)), 3));
+    IStmt printV1_2 = new PrintStmt(new HeapReadingExp(new VarExp("v1")));
+    IStmt releaseCnt2 = new ReleaseStatement("cnt");
+
+    // Main Thread
+    IStmt acquireCntMain = new AcquireStatement("cnt");
+    IStmt printV1Main = new PrintStmt(new ArithExp(new HeapReadingExp(new VarExp("v1")), new ValueExp(new IntValue(1)), 2));
+    IStmt releaseCntMain = new ReleaseStatement("cnt");
+    IStmt program = new CompStmt(
+            declV1,
+            new CompStmt(
+                    declCnt,
+                    new CompStmt(
+                            newV1,
+                            new CompStmt(
+                                    createSemaphore,
+                                    new CompStmt(
+                                            new ForkStmt(
+                                                    new CompStmt(
+                                                            acquireCnt1,
+                                                            new CompStmt(
+                                                                    writeV1_1,
+                                                                    new CompStmt(
+                                                                            printV1_1,
+                                                                            releaseCnt1
+                                                                    )
+                                                            )
+                                                    )
+                                            ),
+                                            new CompStmt(
+                                                    new ForkStmt(
+                                                            new CompStmt(
+                                                                    acquireCnt2,
+                                                                    new CompStmt(
+                                                                            writeV1_1,
+                                                                            new CompStmt(
+                                                                                    writeV1_2,
+                                                                                    new CompStmt(
+                                                                                            printV1_2,
+                                                                                            releaseCnt2
+                                                                                    )
+                                                                            )
+                                                                    )
+                                                            )),
+                                                    new CompStmt(
+                                                            acquireCntMain,
+                                                            new CompStmt(
+                                                                    printV1Main,
+                                                                    releaseCntMain
+                                                            )
+                                                    )
+                                            )
+                                    )
+                            )
+                    )
+            )
+    );
+    return program;
+
+}
 
 
     public static IStmt[] exampleList(){

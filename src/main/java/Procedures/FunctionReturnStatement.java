@@ -4,7 +4,7 @@
 //import toyLanguageInterpreter.exceptions.InterpreterException;
 //import toyLanguageInterpreter.exceptions.StatementException;
 //import toyLanguageInterpreter.model.PrgState;
-//import toyLanguageInterpreter.model.adt.MyIDictionary;
+//import toyLanguageInterpreter.model.adt.dictionary.MyIDictionary;
 //import toyLanguageInterpreter.model.statements.IStmt;
 //import toyLanguageInterpreter.model.types.Type;
 //

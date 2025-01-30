@@ -1,6 +1,9 @@
 # Toy Language Interpreter
 
-This project is an interpreter for a custom "toy" language designed for educational purposes, aimed at demonstrating fundamental concepts in language interpretation and execution. It includes a stack-based execution model, a symbol table for variable management, and an output stream to capture printed results.
+
+![img_4.png](img_4.png)
+![img_5.png](img_5.png)
+
 
 ## Table of Contents
 
@@ -10,7 +13,6 @@ This project is an interpreter for a custom "toy" language designed for educatio
     - [Types](#types)
     - [Values](#values)
     - [Expressions](#expressions)
-- [Examples](#examples)
 - [Interpreter Architecture](#interpreter-architecture)
     - [Execution Stack (ExeStack)](#execution-stack-exestack)
     - [Symbol Table (SymTable)](#symbol-table-symtable)
@@ -26,7 +28,10 @@ This project is an interpreter for a custom "toy" language designed for educatio
 
 ## Language Overview
 
-This interpreter executes programs in the Toy Language by parsing and evaluating statements sequentially. Programs are built by combining statements, expressions, and variables to perform operations. The language supports essential data types (int, bool, and string), arithmetic operations, logical operations, and a structured flow control.
+This project is an interpreter for a custom "toy" language, designed for educational purposes to demonstrate key concepts in language interpretation, execution, and concurrent programming. It includes a stack-based execution model, a symbol table for variable management, file operations, heap memory, and synchronization mechanisms such as CountdownLatch, ToySemaphore, Semaphore, and Lock mechanisms.
+
+The GUI for the interpreter is implemented using JavaFX, and Gradle is used as the automation tool for managing dependencies and building the project efficiently.
+
 
 ### Key Language Constructs
 
@@ -39,10 +44,17 @@ A program (`Prg`) is defined by a single statement (`Stmt`). Each statement may 
 - **Print Statement**: `Print(Exp)`
 - **Conditional Statement**: `If Exp Then Stmt1 Else Stmt2`
 - **No Operation (NOP)**: `nop`
+- **Conditional Assignment Statement**:
+- **Fork Statement**
+- **If Statement**
+- **While Statement**
 - **File Operations**
   - openRFile: Opens a file for reading.
   - readFile: Opens a file for reading.
   - closeRFile: Opens a file for reading.
+- **Heap Operations**
+  - Heap Allocation Statement
+  - Heap Writing Statement
 
 #### Types
 
@@ -68,10 +80,14 @@ Expressions (`Exp`) include:
 - **Arithmetic Expressions**: e.g., `Exp1 + Exp2`, `Exp1 - Exp2`
 - **Logical Expressions**: e.g., `Exp1 and Exp2`, `Exp1 or Exp2`
 - **Relational Expressions**: e.g., `Exp1 < Exp2`,`Exp1 == Exp2`
+
+---
+  ![img_3.png](img_3.png)
+
 ---
 # Interpreter Architecture
 
-The interpreter operates with three primary structures:
+The interpreter operates with the following ADT's:
 
 ### Execution Stack (ExeStack)
 The **ExeStack** holds statements awaiting execution. Initially, it contains the original program, and statements are pushed and popped as they execute.
@@ -86,11 +102,16 @@ The **ExeStack** holds statements awaiting execution. Initially, it contains the
 The **FileTable** tracks the opened files during the program's execution. It is represented as a dictionary mapping a StringValue (filename) to a file descriptor (BufferedReader). Files are accessed by their string identifiers, and the file descriptors are used for reading data.
 
 ### Heap Table (Heap)
-The **Heap Table** is a dictionary of
-mappings (address, content) where the address is an integer (the index of a location in the heap)
-while the content is a Value. Heap must manage the unicity of the addresses, therefore it must have
-a field that denotes the new free location. The addresses start from 1. The address 0 is considered an
-invalid address (namely null).
+Heap must manage the unicity of the addresses, therefore it must have
+a field that denotes the new free location. The addresses start from 1
+### Latch Table
+Stores countdown latches, allowing threads to wait until a condition is met.
+
+### (Toy) Semaphore Table
+Manages semaphores, controlling access to shared resources.
+
+### Lock Table
+Tracks locks for mutual exclusion, preventing race conditions in concurrent execution.
 
 ---
 Each program execution initializes its own unique `PrgState` containing these structures.
@@ -145,6 +166,10 @@ A **garbage collector** is a system or process responsible for automatically man
 This process ensures that the program does not run out of memory and maintains efficient use of resources over time. The garbage collector often runs periodically in the background or when the system detects that memory is running low.
 
 ---
+###
+The GUI for this project is implemented using JavaFX, a modern framework for building interactive graphical user interfaces in Java.
+
+To efficiently manage dependencies and automate the build process, Gradle is used as the automation tool. 
 ## Setup and Usage
 
 ### Prerequisites
@@ -155,7 +180,7 @@ This process ensures that the program does not run out of memory and maintains e
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-repo/toyLanguageInterpreter.git
+git clone https://github.com/Eduardismund/toy-language-interpreter
 ```
 
 Navigate to the repository:

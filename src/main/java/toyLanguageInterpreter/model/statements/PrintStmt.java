@@ -5,11 +5,11 @@ import toyLanguageInterpreter.exceptions.ExpressionException;
 import toyLanguageInterpreter.exceptions.InterpreterException;
 import toyLanguageInterpreter.exceptions.MyException;
 import toyLanguageInterpreter.model.PrgState;
-import toyLanguageInterpreter.model.adt.MyIDictionary;
+import toyLanguageInterpreter.model.adt.dictionary.MyIDictionary;
 import toyLanguageInterpreter.model.expressions.Exp;
 import toyLanguageInterpreter.model.types.Type;
 import toyLanguageInterpreter.model.values.Value;
-import toyLanguageInterpreter.model.adt.MyIList;
+import toyLanguageInterpreter.model.adt.list.MyIList;
 
 public class PrintStmt implements IStmt {
     private Exp exp;

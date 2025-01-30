@@ -6,12 +6,11 @@ import toyLanguageInterpreter.exceptions.InterpreterException;
 import toyLanguageInterpreter.exceptions.StatementException;
 import toyLanguageInterpreter.exceptions.MyException;
 import toyLanguageInterpreter.model.PrgState;
-import toyLanguageInterpreter.model.adt.MyIDictionary;
-import toyLanguageInterpreter.model.adt.MyStack;
+import toyLanguageInterpreter.model.adt.dictionary.MyIDictionary;
+import toyLanguageInterpreter.model.adt.stack.MyStack;
 import toyLanguageInterpreter.model.types.Type;
 
 import java.io.FileNotFoundException;
-import java.util.Stack;
 
 public class ForkStmt implements IStmt {
     private IStmt forkStmt;
@@ -29,7 +28,7 @@ public class ForkStmt implements IStmt {
         final var newExeStack = new MyStack<IStmt>();
 
         final var newSymTable = state.getSymTable().deepCopy();
-        return new PrgState(newExeStack, newSymTable, state.getOut(), forkStmt, state.getLatchTable(), state.getFileTable(), state.getHeap());
+        return new PrgState(newExeStack, newSymTable, state.getOut(), forkStmt, state.getLatchTable(), state.getToySemaphoreTable(), state.getSemaphoreTable(), state.getLockTable(), state.getFileTable(), state.getHeap());
     }
 
     @Override

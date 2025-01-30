@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="toyLanguageInterpreter.JavaFXTableExample">
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="toyLanguageInterpreter.InterpreterGUIController">
 
     <HBox fx:id="hbox" spacing="10" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10"
           styleClass="hbox-title">

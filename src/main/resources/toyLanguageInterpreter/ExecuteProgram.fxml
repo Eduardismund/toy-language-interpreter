@@ -14,7 +14,7 @@
 
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.image.Image?>
-<AnchorPane minHeight="450.0" minWidth="800.0" prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="toyLanguageInterpreter.JavaFXTableExample">
+<AnchorPane minHeight="450.0" minWidth="800.0" prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="toyLanguageInterpreter.InterpreterGUIController">
     <!-- Link the CSS file here -->
 
 

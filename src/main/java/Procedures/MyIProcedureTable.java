@@ -1,13 +1,9 @@
 package Procedures;
 
 import javafx.util.Pair;
-import toyLanguageInterpreter.model.adt.MyIDictionary;
-import toyLanguageInterpreter.model.expressions.ArithExp;
-import toyLanguageInterpreter.model.expressions.VarExp;
+import toyLanguageInterpreter.model.adt.dictionary.MyIDictionary;
 import toyLanguageInterpreter.model.statements.*;
-import toyLanguageInterpreter.model.types.IntType;
 
-import java.util.Arrays;
 import java.util.List;
 
 public interface MyIProcedureTable extends MyIDictionary<String, Pair<List<String>, IStmt>> {

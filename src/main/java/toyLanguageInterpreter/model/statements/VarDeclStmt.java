@@ -8,7 +8,7 @@ import toyLanguageInterpreter.exceptions.MyException;
 import toyLanguageInterpreter.model.PrgState;
 import toyLanguageInterpreter.model.types.Type;
 import toyLanguageInterpreter.model.values.Value;
-import toyLanguageInterpreter.model.adt.MyIDictionary;
+import toyLanguageInterpreter.model.adt.dictionary.MyIDictionary;
 
 public class VarDeclStmt implements IStmt {
 
