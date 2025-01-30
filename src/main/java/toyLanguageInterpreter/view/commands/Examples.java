@@ -8,9 +8,7 @@ package toyLanguageInterpreter.view.commands;
 
 
 import javafx.util.Pair;
-import statement.ConditionalAssignment;
-import statement.ForStatement;
-import statement.WaitStatement;
+
 import toyLanguageInterpreter.model.expressions.*;
 import toyLanguageInterpreter.model.statements.*;
 import toyLanguageInterpreter.model.statements.CountDownLatchStatements.AwaitStatement;

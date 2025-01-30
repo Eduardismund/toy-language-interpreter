@@ -8,6 +8,7 @@ executionStack =
 , output = []
 , fileTable = {}
 , heap = {}
+, countDown latch = {}
 , originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
 
 
@@ -20,6 +21,7 @@ executionStack =
 , output = []
 , fileTable = {}
 , heap = {}
+, countDown latch = {}
 , originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
 
 
@@ -33,6 +35,7 @@ executionStack =
 , output = []
 , fileTable = {}
 , heap = {}
+, countDown latch = {}
 , originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
 
 
@@ -45,6 +48,7 @@ executionStack =
 , output = []
 , fileTable = {}
 , heap = {}
+, countDown latch = {}
 , originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
 
 
@@ -58,6 +62,7 @@ executionStack =
 , output = []
 , fileTable = {}
 , heap = {}
+, countDown latch = {}
 , originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
 
 
@@ -70,6 +75,7 @@ executionStack =
 , output = []
 , fileTable = {}
 , heap = {}
+, countDown latch = {}
 , originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
 
 
@@ -83,6 +89,7 @@ executionStack =
 , output = []
 , fileTable = {}
 , heap = {}
+, countDown latch = {}
 , originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
 
 
@@ -95,6 +102,7 @@ executionStack =
 , output = []
 , fileTable = {}
 , heap = {1 -> 0}
+, countDown latch = {}
 , originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
 
 
@@ -108,6 +116,7 @@ executionStack =
 , output = []
 , fileTable = {}
 , heap = {1 -> 0}
+, countDown latch = {}
 , originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
 
 
@@ -120,6 +129,7 @@ executionStack =
 , output = []
 , fileTable = {}
 , heap = {1 -> 0, 4 -> 0}
+, countDown latch = {}
 , originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
 
 
@@ -133,6 +143,7 @@ executionStack =
 , output = []
 , fileTable = {}
 , heap = {1 -> 0, 4 -> 0}
+, countDown latch = {}
 , originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
 
 
@@ -145,6 +156,7 @@ executionStack =
 , output = []
 , fileTable = {}
 , heap = {1 -> 1, 4 -> 0}
+, countDown latch = {}
 , originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
 
 
@@ -158,6 +170,7 @@ executionStack =
 , output = []
 , fileTable = {}
 , heap = {1 -> 1, 4 -> 0}
+, countDown latch = {}
 , originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
 
 
@@ -170,6 +183,7 @@ executionStack =
 , output = []
 , fileTable = {}
 , heap = {1 -> 1, 4 -> 2}
+, countDown latch = {}
 , originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
 
 
@@ -183,6 +197,7 @@ executionStack =
 , output = []
 , fileTable = {}
 , heap = {1 -> 1, 4 -> 2}
+, countDown latch = {}
 , originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
 
 
@@ -196,6 +211,7 @@ executionStack =
 , output = []
 , fileTable = {}
 , heap = {1 -> 1, 4 -> 2}
+, countDown latch = {}
 , originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
 
 
@@ -209,6 +225,7 @@ executionStack =
 , output = []
 , fileTable = {}
 , heap = {1 -> 1, 4 -> 2}
+, countDown latch = {}
 , originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
 
 
@@ -221,6 +238,7 @@ executionStack =
 , output = []
 , fileTable = {}
 , heap = {1 -> 1, 4 -> 2}
+, countDown latch = {}
 , originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
 
 
@@ -234,6 +252,7 @@ executionStack =
 , output = []
 , fileTable = {}
 , heap = {1 -> 1, 4 -> 2}
+, countDown latch = {}
 , originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
 
 
@@ -246,6 +265,7 @@ executionStack =
 , output = [100]
 , fileTable = {}
 , heap = {1 -> 1, 4 -> 2}
+, countDown latch = {}
 , originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
 
 
@@ -259,6 +279,7 @@ executionStack =
 , output = [100]
 , fileTable = {}
 , heap = {1 -> 1, 4 -> 2}
+, countDown latch = {}
 , originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
 
 
@@ -272,6 +293,7 @@ executionStack =
 , output = [100]
 , fileTable = {}
 , heap = {1 -> 1, 4 -> 2}
+, countDown latch = {}
 , originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
 
 
@@ -285,6 +307,7 @@ executionStack =
 , output = [100]
 , fileTable = {}
 , heap = {1 -> 1, 4 -> 2}
+, countDown latch = {}
 , originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
 
 
@@ -297,6 +320,7 @@ executionStack =
 , output = [100]
 , fileTable = {}
 , heap = {1 -> 1, 4 -> 2}
+, countDown latch = {}
 , originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
 
 
@@ -308,6 +332,7 @@ executionStack =
 , output = [100, 200]
 , fileTable = {}
 , heap = {1 -> 1, 4 -> 2}
+, countDown latch = {}
 , originalProgram = (Ref(int) a; (Ref(int) b; (int v; (new(a, 0); (new(b, 0); (writeHeap(a, 1); (writeHeap(b, 2); (v = rh(a) < rh(b) ? 100 : 200; (print(v); (v = rh(b) - 2 > rh(a) ? 100 : 200; print(v)))))))))))
 
 
